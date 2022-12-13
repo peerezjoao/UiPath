@@ -1,0 +1,360 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="StartGame" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2151,2007" sap2010:WorkflowViewState.IdRef="StartGame_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="StartGame" sap:VirtualizedContainerService.HintSize="634,1942" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Betano Mines Slot Grátis | Cassino Betano" sap:VirtualizedContainerService.HintSize="592,1852" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Always" ScopeGuid="2799e86b-7504-4a14-b0e2-06580aa2c569" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="558,1626" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="516,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Start process Betano.br&quot;]" />
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="a0c469bf-e4ca-4a10-be76-9d53f0dbf1bc" DisplayName="CV Screen Scope 'Start Game'" sap:VirtualizedContainerService.HintSize="516,1378" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V5">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Fazer" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:Boolean" Name="boolean_play" />
+                    </Sequence.Variables>
+                    <p:CvElementExistsWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: Text 'JOGAR' (1194,380,128,32)&quot;]" DesignTimeCacheId="a0c469bf-e4ca-4a10-be76-9d53f0dbf1bc" DesignTimeScaleFactor="1" DisplayName="CV Element Exists - Play" sap:VirtualizedContainerService.HintSize="482,146" sap2010:WorkflowViewState.IdRef="CvElementExistsWithDescriptor_1" InformativeScreenshot="3dbf47fcb28f63c0247c51e3e948773c" NumberOfScrolls="2" Result="[boolean_play]" ScrollDirection="None" Version="V5">
+                      <p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                        <uc:CvDescriptor Id="88864b76-347f-42c1-8578-5654cffd472c">
+                          <uc:CvDescriptor.Target>
+                            <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1194, 380, 128, 32" ElementType="Text" Text="JOGAR" />
+                          </uc:CvDescriptor.Target>
+                        </uc:CvDescriptor>
+                      </p:CvElementExistsWithDescriptor.DesignTimeDescriptor>
+                    </p:CvElementExistsWithDescriptor>
+                    <If Condition="[boolean_play]" sap:VirtualizedContainerService.HintSize="482,809" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,440" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Starting the extraction&quot;]" />
+                          <p:CvClickWithDescriptor DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="600" DelayMS="600" Descriptor="[&quot;Target: Text 'JOGAR' (1194,380,128,32)&quot;]" DesignTimeCacheId="a0c469bf-e4ca-4a10-be76-9d53f0dbf1bc" DesignTimeScaleFactor="1" DisplayName="CV Click - Texto" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="3dbf47fcb28f63c0247c51e3e948773c" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                            <p:CvClickWithDescriptor.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </p:CvClickWithDescriptor.CursorPosition>
+                            <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                              <uc:CvDescriptor Id="bf7c62de-8a26-43d0-9b56-a1284dec92b8">
+                                <uc:CvDescriptor.Target>
+                                  <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1194, 380, 128, 32" ElementType="Text" Text="JOGAR" />
+                                </uc:CvDescriptor.Target>
+                              </uc:CvDescriptor>
+                            </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                            <p:CvClickWithDescriptor.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="693f681c-c7e4-43d3-8af5-ded1bfcb7ba8">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </p:CvClickWithDescriptor.Target>
+                          </p:CvClickWithDescriptor>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,206" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Element not found.&quot;]" />
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                      <uc:CVCache DataSent="False" DisplayName="Ecrã CV Element Exists - 'JOGA (Principal)" Id="a0c469bf-e4ca-4a10-be76-9d53f0dbf1bc" InformativeScreenshot="255a8c5eef5987f8f613a6d86cf77742" LogicalPosition="568, 215" OcrText="SALDO MINAS APOSTA R$1000.00 1 R$10 BETANO 6 ? 6 &amp; MINES E - 6 &amp; 6 JOGAR 6 ? ? E 6 ? &amp; ? &amp; $ ? B 00:00:14 o 15:19" Position="568, 215" ScreenshotGuid="3eddbc62-5e6c-443b-a322-f74d3e128016" ServerVersion="1">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                            <uc:CvElementInfo Category="Button" Region="738, 158, 112, 112" />
+                            <uc:CvElementInfo Category="Button" Region="515, 157, 113, 113" />
+                            <uc:CvElementInfo Category="Button" Region="513, 269, 114, 110" />
+                            <uc:CvElementInfo Category="Button" Region="736, 268, 115, 111" />
+                            <uc:CvElementInfo Category="Button" Region="627, 158, 112, 112" />
+                            <uc:CvElementInfo Category="Button" Region="514, 380, 113, 109" />
+                            <uc:CvElementInfo Category="Button" Region="850, 158, 110, 110" />
+                            <uc:CvElementInfo Category="Button" Region="514, 491, 114, 111" />
+                            <uc:CvElementInfo Category="Button" Region="405, 158, 110, 110" />
+                            <uc:CvElementInfo Category="Button" Region="625, 269, 113, 110" />
+                            <uc:CvElementInfo Category="Button" Region="625, 380, 113, 110" />
+                            <uc:CvElementInfo Category="Button" Region="514, 604, 115, 110" />
+                            <uc:CvElementInfo Category="Button" Region="736, 380, 114, 111" />
+                            <uc:CvElementInfo Category="Button" Region="736, 490, 114, 112" />
+                            <uc:CvElementInfo Category="Button" Region="848, 271, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="848, 382, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="404, 382, 110, 106" />
+                            <uc:CvElementInfo Category="Button" Region="736, 603, 115, 111" />
+                            <uc:CvElementInfo Category="Button" Region="624, 490, 115, 112" />
+                            <uc:CvElementInfo Category="Button" Region="847, 604, 114, 109" />
+                            <uc:CvElementInfo Category="Button" Region="848, 493, 112, 108" />
+                            <uc:CvElementInfo Category="Button" Region="405, 271, 109, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="643, 618, 80, 86" />
+                            <uc:CvElementInfo Category="Button" Region="625, 604, 115, 110" />
+                            <uc:CvElementInfo Category="Icon" Region="531, 617, 81, 86" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 618, 81, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 171, 79, 87" />
+                            <uc:CvElementInfo Category="Icon" Region="756, 170, 79, 86" />
+                            <uc:CvElementInfo Category="Button" Region="405, 606, 110, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 286, 80, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 172, 78, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 172, 80, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="533, 173, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="1205, 178, 108, 108" />
+                            <uc:CvElementInfo Category="Button" Region="404, 493, 111, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 508, 80, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="866, 618, 83, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="866, 397, 81, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 286, 80, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="419, 619, 83, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 398, 80, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="420, 509, 80, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="755, 285, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 285, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 285, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 508, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="45, 718, 28, 30" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 507, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 508, 80, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 397, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="755, 397, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 397, 78, 84" />
+                            <uc:CvElementInfo Category="Cell" Region="402, 488, 111, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="619, 264, 119, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 489, 114, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="730, 385, 118, 107" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 377, 114, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 488, 115, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="734, 489, 114, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="402, 377, 110, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="402, 266, 112, 117" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 378, 115, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 266, 115, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="734, 266, 114, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="731, 599, 117, 116" />
+                            <uc:CvElementInfo Category="Cell" Region="510, 601, 117, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="621, 599, 116, 120" />
+                            <uc:CvElementInfo Category="Cell" Region="400, 599, 114, 120" />
+                            <uc:CvElementInfo Category="Cell" Region="846, 490, 115, 110" />
+                            <uc:CvElementInfo Category="Cell" Region="844, 380, 118, 109" />
+                            <uc:CvElementInfo Category="Cell" Region="844, 600, 125, 117" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1157, 290, 202, 201" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1212, 720, 25, 27" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1202, 500, 115, 108" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="14, 194, 120, 136" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1206, 182, 106, 107" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1224, 521, 72, 68" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1172, 66, 25, 36" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1155, 287, 207, 205" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1175, 69, 21, 31" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="401, 154, 112, 110" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="626, 163, 109, 106" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="738, 163, 108, 106" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="850, 274, 110, 101" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="850, 149, 110, 118" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="511, 154, 115, 114" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1245, 11, 121, 164" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="948, 267, 16, 113" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="16, 200, 111, 114" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1146, 39, 97, 29" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1165, 289, 201, 196" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1258, 461, 85, 21" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1206, 378, 139, 186" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1325, 298, 36, 197" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1275, 454, 75, 19" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="956, 487, 18, 115" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 267, 20, 112" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1238, 32, 127, 34" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1268, 227, 36, 10" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="33">
+                            <uc:OcrTextInfo Region="62, 35, 88, 23" Text="SALDO" />
+                            <uc:OcrTextInfo Region="1145, 36, 82, 21" Text="MINAS" />
+                            <uc:OcrTextInfo Region="1246, 36, 103, 22" Text="APOSTA" />
+                            <uc:OcrTextInfo Region="21, 69, 171, 33" Text="R$1000.00" />
+                            <uc:OcrTextInfo Region="1177, 71, 17, 28" Text="1" />
+                            <uc:OcrTextInfo Region="1258, 69, 79, 32" Text="R$10" />
+                            <uc:OcrTextInfo Region="130, 236, 218, 48" Text="BETANO" />
+                            <uc:OcrTextInfo Region="440, 189, 37, 65" Text="6" />
+                            <uc:OcrTextInfo Region="537, 177, 64, 78" Text="?" />
+                            <uc:OcrTextInfo Region="661, 187, 40, 66" Text="6" />
+                            <uc:OcrTextInfo Region="884, 185, 40, 69" Text="&amp;" />
+                            <uc:OcrTextInfo Region="171, 286, 165, 43" Text="MINES" />
+                            <uc:OcrTextInfo Region="440, 299, 37, 66" Text="E" />
+                            <uc:OcrTextInfo Region="545, 294, 46, 71" Text="-" />
+                            <uc:OcrTextInfo Region="660, 296, 41, 68" Text="6" />
+                            <uc:OcrTextInfo Region="770, 294, 44, 71" Text="&amp;" />
+                            <uc:OcrTextInfo Region="883, 297, 40, 67" Text="6" />
+                            <uc:OcrTextInfo Region="1194, 380, 128, 32" Text="JOGAR" />
+                            <uc:OcrTextInfo Region="441, 416, 36, 61" Text="6" />
+                            <uc:OcrTextInfo Region="541, 402, 56, 75" Text="?" />
+                            <uc:OcrTextInfo Region="654, 404, 50, 73" Text="?" />
+                            <uc:OcrTextInfo Region="885, 410, 37, 67" Text="E" />
+                            <uc:OcrTextInfo Region="440, 524, 37, 64" Text="6" />
+                            <uc:OcrTextInfo Region="540, 512, 57, 77" Text="?" />
+                            <uc:OcrTextInfo Region="661, 519, 40, 68" Text="&amp;" />
+                            <uc:OcrTextInfo Region="764, 513, 55, 76" Text="?" />
+                            <uc:OcrTextInfo Region="878, 517, 47, 70" Text="&amp;" />
+                            <uc:OcrTextInfo Region="1249, 543, 19, 25" Text="$" />
+                            <uc:OcrTextInfo Region="540, 624, 57, 76" Text="?" />
+                            <uc:OcrTextInfo Region="661, 631, 40, 67" Text="B" />
+                            <uc:OcrTextInfo Region="75, 721, 108, 24" Text="00:00:14" />
+                            <uc:OcrTextInfo Region="1213, 721, 22, 22" Text="o" />
+                            <uc:OcrTextInfo Region="1240, 720, 61, 23" Text="15:19" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,32" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="73959cdf-6a33-4154-9c30-cc4bdee1d4a9" InformativeScreenshot="2c9b2ad1fc55abf2701ea95d630e1c73" Selector="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl id='canvas' tag='CANVAS' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="472cc337c174ccd13e57b6a79f2c2837.jpg" Selector="&lt;html app='msedge.exe' title='Betano Mines Slot Grátis | Cassino Betano' /&gt;" Url="https://br.betano.com/casino/games/betano-mines/7849/fun/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,1907 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ExtractImages" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1826,3983" sap2010:WorkflowViewState.IdRef="ExtractImages_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="51">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ExtractImages" sap:VirtualizedContainerService.HintSize="1146,3918" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Betano Mines Slot Grátis | Cassino Betano" sap:VirtualizedContainerService.HintSize="1104,3828" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="064b0a2d-41de-48cb-be03-4d047a6a7985" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="1070,3602" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DisplayName="CV Screen Scope 'CANVAS  canvas'" sap:VirtualizedContainerService.HintSize="1028,3510" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V5">
+              <p:CVScope.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Fazer" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <Sequence DisplayName="Extract" sap:VirtualizedContainerService.HintSize="994,3151" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="get_text" />
+                        <Variable x:TypeArguments="x:Int32" Name="contador" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="932,70" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyText (1182,369,154,25)&quot; +&#xA;&quot;Anchor: Text 'R$*' (1231,399,55,27)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Qualquer Texto" sap:VirtualizedContainerService.HintSize="932,229" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" InformativeScreenshot="549456bb9c9c463f5bfd03580f9109f4" NumberOfScrolls="2" RefreshBefore="True" Result="[get_text]" ScrollDirection="None" Version="V5">
+                        <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                          <uc:CvDescriptor Id="459ca153-4030-4589-b823-df7d180ee095">
+                            <uc:CvDescriptor.Anchors>
+                              <x:Array Type="uc:CvElementDescriptor">
+                                <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1231, 399, 55, 27" ElementType="Text" Text="R$0" />
+                              </x:Array>
+                            </uc:CvDescriptor.Anchors>
+                            <uc:CvDescriptor.Target>
+                              <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="AnyText" />
+                            </uc:CvDescriptor.Target>
+                          </uc:CvDescriptor>
+                        </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                      </p:CvGetTextWithDescriptor>
+                      <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[get_text.Equals(&quot;LEVANTAR&quot;)]" DisplayName="While" sap:VirtualizedContainerService.HintSize="932,2650" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                        <ui:InterruptibleWhile.Body>
+                          <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="896,2475" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Switch x:TypeArguments="x:Int32" DisplayName="Switch" Expression="[contador]" sap:VirtualizedContainerService.HintSize="854,61" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence x:Key="1" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (405,158,109,110)&quot; +&#xA;&quot;Anchor: Icon (421,172,80,85)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="760d59da3c18d7e3fe60d047c89147e7" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="44113ef9-96a1-4fa3-8614-6397792e2364">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="421, 172, 80, 85" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="405, 158, 109, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5d12a3c3-aef8-4808-bc6f-4daf84f2f666">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1 + contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="2" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (519,143,110,108)&quot; +&#xA;&quot;Anchor: Icon (536,156,78,82)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1169,348,149,25)&quot;]" DesignTimeCacheId="f78da75b-d05a-4d44-8c4d-7f2edab66543" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="51da52f5665b8d9152d165c4275eb233" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="5886c48e-bb62-439b-b5f8-870605a7130f">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="536, 156, 78, 82" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1169, 348, 149, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="519, 143, 110, 108" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="a6a0287f-3c72-4e9e-b8f8-bd75d3e02a3f">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1 + contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="3" sap:VirtualizedContainerService.HintSize="400,364" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (627,158,112,112)&quot; +&#xA;&quot;Anchor: Icon (645,172,78,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_3" InformativeScreenshot="2e413e88b386c473328e6055d0b684d6" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="90db3230-1eaa-48d1-96ac-e348e5d71ec2">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="645, 172, 78, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="627, 158, 112, 112" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="4bf64966-dd32-4bf8-a391-2dcf619cc139">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="4" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (738,158,112,112)&quot; +&#xA;&quot;Anchor: Icon (756,170,79,86)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_4" InformativeScreenshot="de1d4cc6eba8bd66d953e2c5faf4adab" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="fbe2ba75-d612-45ee-af80-3cbbcac16c24">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="756, 170, 79, 86" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="738, 158, 112, 112" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d932dba4-0e27-46a9-be75-4cc56360514b">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="5" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (850,158,110,110)&quot; +&#xA;&quot;Anchor: Icon (867,171,79,87)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_5" InformativeScreenshot="a7e60be4ad78078d4c937937b2187907" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="a3468989-2d42-470d-9e07-9cff64f0f4c3">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="867, 171, 79, 87" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="850, 158, 110, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1388b5ec-ed43-42cc-9a17-1186ff2cac2a">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="6" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (405,271,109,107)&quot; +&#xA;&quot;Anchor: Icon (421,286,80,83)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_6" InformativeScreenshot="3873abc7365fbfd68ec3f090e1ce470a" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="845221ce-a573-46a5-b238-f7a7b72d1574">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="421, 286, 80, 83" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="405, 271, 109, 107" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c70af2b4-a62b-47f8-8154-1b6f06c15b94">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="7" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (513,269,114,110)&quot; +&#xA;&quot;Anchor: Icon (532,285,80,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_7" InformativeScreenshot="ce7b0e595c6277e987014ac8c6ad7a10" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="51bf5bbf-edb9-4e7d-b811-ce6c63caddc4">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="532, 285, 80, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="513, 269, 114, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d3c62bac-ea6a-4253-b952-0a74a2e770ae">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="8" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (625,269,113,110)&quot; +&#xA;&quot;Anchor: Icon (644,285,79,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_8" InformativeScreenshot="543092a28f1e492c826c924f65d9d85a" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="3d872de2-821c-4ab3-8f11-032647e72333">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="644, 285, 79, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="625, 269, 113, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="36c0bfdd-506e-4e33-97f8-fc09f02fa85d">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="9" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (736,268,115,111)&quot; +&#xA;&quot;Anchor: Icon (755,285,80,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_9" InformativeScreenshot="b646f6f61cf81763a50a23c31438d750" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="86cf566f-c54e-4d7e-ad5b-de808d51fd15">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="755, 285, 80, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="736, 268, 115, 111" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1ce722c8-b0b5-415a-8dd6-0bac267f6b68">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="10" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (848,271,112,107)&quot; +&#xA;&quot;Anchor: Icon (867,286,80,81)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_10" InformativeScreenshot="2d83895e2a725dea33dd2f85a2eb3062" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="7b637e19-2980-43aa-a2eb-ef8539c346dd">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="867, 286, 80, 81" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="848, 271, 112, 107" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="f5eba8d3-5bac-4d78-b02b-58175fa6f9e3">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="11" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (404,382,110,106)&quot; +&#xA;&quot;Anchor: Icon (421,398,80,83)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_12" InformativeScreenshot="ba748f0b249bebfdf19b0354a846d968" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="5b546b1f-7d1d-47c6-a7c5-ca588ecb06bf">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="421, 398, 80, 83" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="404, 382, 110, 106" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="0ee7cf45-5f9a-46de-a3c9-d6a9b75cf021">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="12" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (514,380,113,109)&quot; +&#xA;&quot;Anchor: Icon (532,397,79,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_13" InformativeScreenshot="41d81f3bd538b613a90d669e62a70253" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="3897f68a-9ebc-4cfc-afa9-85290665bb27">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="532, 397, 79, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="514, 380, 113, 109" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3c76f39a-f9b7-4adc-b02f-0a8308c0c51a">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="13" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (625,380,113,110)&quot; +&#xA;&quot;Anchor: Icon (645,397,78,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_14" InformativeScreenshot="8eb0d990e011b170f4fbbe9089707caf" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="69a65a24-4577-42bc-926c-45c3e6e894f4">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="645, 397, 78, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="625, 380, 113, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1626950c-6759-465e-be88-fb5cab0c52cf">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="14" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (736,380,114,111)&quot; +&#xA;&quot;Anchor: Icon (755,397,80,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_15" InformativeScreenshot="b11ac25fa45b8d862c1a73f55ed41728" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="8474ba66-d5da-41a7-a822-89ad42560580">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="755, 397, 80, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="736, 380, 114, 111" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="7817ec52-508b-4df5-a6a1-fcc127b9a84d">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="15" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (848,382,112,107)&quot; +&#xA;&quot;Anchor: Icon (866,397,81,82)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_16" InformativeScreenshot="2bc4774cb57978940c27f59209b05024" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="87915e48-fa21-4e16-909e-b1bb6dbf256a">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="866, 397, 81, 82" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="848, 382, 112, 107" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="43c684be-815f-4f1f-8f1d-4a2f59f594c5">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="16" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (404,493,110,107)&quot; +&#xA;&quot;Anchor: Icon (420,509,80,82)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_17" InformativeScreenshot="cd143aa165b5d6ea1b5506d145067247" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="c07b7dac-c05c-4254-aa4f-c470963ba0cc">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="420, 509, 80, 82" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="404, 493, 110, 107" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="200d564d-fbb4-48a6-b7bc-816a5ba0d55c">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="17" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (514,491,114,111)&quot; +&#xA;&quot;Anchor: Icon (532,507,80,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_18" InformativeScreenshot="49b206d129949d68cf328712caa0986f" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="8e73cdd5-27a1-447c-af00-284ab51cdfc9">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="532, 507, 80, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="514, 491, 114, 111" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="61d2329f-5a7f-4ac6-ad21-64785acc7d3c">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="18" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (624,490,115,112)&quot; +&#xA;&quot;Anchor: Icon (644,508,79,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_19" InformativeScreenshot="99e7905dbd072ec45de995b03051e5ad" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="0e61b7e1-615e-498c-8f52-a9a2cb9bbfc9">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="644, 508, 79, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="624, 490, 115, 112" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="57ace3e6-18ca-4957-a014-8fd28019d5d9">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="19" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (736,490,114,112)&quot; +&#xA;&quot;Anchor: Icon (754,508,80,82)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_20" InformativeScreenshot="c035f58b070a0eeb24b5f25642f906c4" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="72c6f364-c827-4c10-be7d-71deba5e5476">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="754, 508, 80, 82" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="736, 490, 114, 112" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d5c6a108-3f00-467e-81a3-d4c18a12fc96">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="20" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (848,493,112,108)&quot; +&#xA;&quot;Anchor: Icon (867,508,80,81)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_21" InformativeScreenshot="e12240db6ec78b80cd86d605b64122c0" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="9bc66871-bf18-44d5-847c-edbd0755d74d">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="867, 508, 80, 81" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="848, 493, 112, 108" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="75743e86-6c9d-482c-bfcc-b39b77140d8a">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="21" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (405,606,110,107)&quot; +&#xA;&quot;Anchor: Icon (419,619,83,84)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_23" InformativeScreenshot="81ae61aa8de71e0670e5b34dc519d437" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="72f2fe24-c1ff-4a19-bd80-bb842b7be593">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="419, 619, 83, 84" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="405, 606, 110, 107" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7ab65a8-bce9-4b8e-9f2b-e1e35149d945">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="22" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (514,604,115,110)&quot; +&#xA;&quot;Anchor: Icon (531,617,81,86)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_24" InformativeScreenshot="f66e512909a73ecec65dc5d4039eb378" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="9c2ba3c5-e1ed-464d-aa5d-588520cb1b45">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="531, 617, 81, 86" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="514, 604, 115, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7ab65a8-bce9-4b8e-9f2b-e1e35149d945">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="23" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (625,604,115,110)&quot; +&#xA;&quot;Anchor: Icon (643,618,80,86)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_25" InformativeScreenshot="7e25b76ea27182979a16fce0e85490cd" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="7f454e34-c748-48db-9a0e-5297cb0b18cb">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="643, 618, 80, 86" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="625, 604, 115, 110" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7ab65a8-bce9-4b8e-9f2b-e1e35149d945">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="24" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (736,603,115,111)&quot; +&#xA;&quot;Anchor: Icon (754,618,81,85)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_26" InformativeScreenshot="1c2bc958fdaa759882fa0da801b24b7b" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="974b3762-6a51-4c9e-bce6-b669807a714c">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="754, 618, 81, 85" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="736, 603, 115, 111" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7ab65a8-bce9-4b8e-9f2b-e1e35149d945">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                              <Sequence x:Key="25" sap:VirtualizedContainerService.HintSize="400,394" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Button (847,604,114,109)&quot; +&#xA;&quot;Anchor: Icon (866,618,83,85)&quot; +&#xA;&quot;Anchor: Text 'LEVANTAR' (1182,369,154,25)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Click - Botão" sap:VirtualizedContainerService.HintSize="358,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_27" InformativeScreenshot="2ebc26664ba1f562f5830f32336ed1eb" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                  <p:CvClickWithDescriptor.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </p:CvClickWithDescriptor.CursorPosition>
+                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <uc:CvDescriptor Id="fb7aa40a-58f4-4e44-946f-f02a9ae12377">
+                                      <uc:CvDescriptor.Anchors>
+                                        <x:Array Type="uc:CvElementDescriptor">
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="866, 618, 83, 85" ElementType="Icon" />
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="Text" Text="LEVANTAR" />
+                                        </x:Array>
+                                      </uc:CvDescriptor.Anchors>
+                                      <uc:CvDescriptor.Target>
+                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="847, 604, 114, 109" ElementType="Button" />
+                                      </uc:CvDescriptor.Target>
+                                    </uc:CvDescriptor>
+                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                  <p:CvClickWithDescriptor.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="c7ab65a8-bce9-4b8e-9f2b-e1e35149d945">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </p:CvClickWithDescriptor.Target>
+                                </p:CvClickWithDescriptor>
+                                <Assign sap:VirtualizedContainerService.HintSize="358,70" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:Int32">[1+contador]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </Sequence>
+                            </Switch>
+                            <uix:NCheckState DisplayName="Check App State 'Game error'" sap:VirtualizedContainerService.HintSize="854,653" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="064b0a2d-41de-48cb-be03-4d047a6a7985" Timeout="5" Version="V3">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,427" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ClickType="Single" DisplayName="Click 'Recarregar'" sap:VirtualizedContainerService.HintSize="338,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="064b0a2d-41de-48cb-be03-4d047a6a7985" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://mines.gamingcorpscasino.com/index.html?game_code=coin_miner_94&amp;config=games/coin-miner/config.json&amp;language=pt&amp;currency=BRL&amp;play_for_fun=true&amp;platform=desktop&amp;customer=isoftbet&amp;auto_spin=true&amp;max_bet=true&amp;ext_params[licenseeid]=685&amp;ext_params[ISBskinid]=23842&amp;ext_params[ISBgameid]=22747&amp;ext_params[launchercode]=isb_stoiximanbr-lux-prod&amp;ext_params[language]=pt&amp;ext_params[lobbyurl]=https%3A%2F%2Fbr.betano.com%2Fcasino%2Flobbyredirect%2F&amp;ext_params[country]=BR&amp;ext_params[extra]=multi&amp;ext_params[customer]=isoftbet&amp;ext_params[preloader]=betano" DesignTimeRectangle="1148, 649, 222, 40" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Recarregar'" FullSelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='SPAN' type='' class='' aaname='Recarregar' check:innerText='RECARREGAR' /&gt;" Guid="8d06e17b-f81c-4ee9-a816-2ae3af3f92b0" ImageBase64="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" InformativeScreenshot="becfcaa4d2ff2fe06fb09c9a0527879e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Betano Mines Slot Grátis | Cassino Betano' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="1128, 638, 264, 63" ElementType="Button" FriendlyName="'Recarregar'" FullSelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl aaname='Recarregar ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl aaname='Recarregar ' tag='BUTTON' type='' class='Dialog__button svelte-1tp8v9f' check:innerText='RECARREGAR' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="338,97" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Destino não aparece" sap:VirtualizedContainerService.HintSize="400,114" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="https://mines.gamingcorpscasino.com/index.html?game_code=coin_miner_94&amp;config=games/coin-miner/config.json&amp;language=pt&amp;currency=BRL&amp;play_for_fun=true&amp;platform=desktop&amp;customer=isoftbet&amp;auto_spin=true&amp;max_bet=true&amp;ext_params[licenseeid]=685&amp;ext_params[ISBskinid]=23842&amp;ext_params[ISBgameid]=22747&amp;ext_params[launchercode]=isb_stoiximanbr-lux-prod&amp;ext_params[language]=pt&amp;ext_params[lobbyurl]=https%3A%2F%2Fbr.betano.com%2Fcasino%2Flobbyredirect%2F&amp;ext_params[country]=BR&amp;ext_params[extra]=multi&amp;ext_params[customer]=isoftbet&amp;ext_params[preloader]=betano" DesignTimeRectangle="958, 502, 604, 37" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Game error'" FullSelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='H2' type='' class='Dialog__title svelte-1tp8v9f' aaname='Game error' check:innerText='GAME ERROR' /&gt;" Guid="078c49df-a611-4ef9-a43e-d5b0bd30f3dc" ImageBase64="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" InformativeScreenshot="866b103ccfbfc0899324487fd742e08c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Betano Mines Slot Grátis | Cassino Betano' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1148, 649, 222, 40" ElementType="Text" FriendlyName="'Recarregar'" FullSelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl tag='SPAN' type='' class='' aaname='Recarregar' check:innerText='RECARREGAR' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckState.Target>
+                            </uix:NCheckState>
+                            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyText (1182,369,154,25)&quot; +&#xA;&quot;Anchor: Text 'R$*' (1231,399,55,27)&quot;]" DesignTimeCacheId="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" DesignTimeScaleFactor="1" DisplayName="CV Get Text - Qualquer Texto" sap:VirtualizedContainerService.HintSize="854,229" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_2" InformativeScreenshot="549456bb9c9c463f5bfd03580f9109f4" NumberOfScrolls="2" RefreshBefore="True" Result="[get_text]" ScrollDirection="None" Version="V5">
+                              <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                                <uc:CvDescriptor Id="459ca153-4030-4589-b823-df7d180ee095">
+                                  <uc:CvDescriptor.Anchors>
+                                    <x:Array Type="uc:CvElementDescriptor">
+                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1231, 399, 55, 27" ElementType="Text" Text="R$0" />
+                                    </x:Array>
+                                  </uc:CvDescriptor.Anchors>
+                                  <uc:CvDescriptor.Target>
+                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1182, 369, 154, 25" ElementType="AnyText" />
+                                  </uc:CvDescriptor.Target>
+                                </uc:CvDescriptor>
+                              </p:CvGetTextWithDescriptor.DesignTimeDescriptor>
+                            </p:CvGetTextWithDescriptor>
+                            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="854,116" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Valor do contador - &quot; + contador.ToString + vbLf +&#xA;&quot;Texto do momento - &quot; + get_text]" />
+                            <If Condition="[get_text.Equals(&quot;JOGAR&quot;) or get_text.Equals(&quot;APOSTA&quot;)]" sap:VirtualizedContainerService.HintSize="854,1166" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="473,903" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NTakeScreenshot DisplayName="Take Screenshot 'Tirar print'" FileName="C:\Users\Public\OneDrive\Documents\CoinMiner\screenshot.png" FileNameMode="DateTime" sap:VirtualizedContainerService.HintSize="431,242" sap2010:WorkflowViewState.IdRef="NTakeScreenshot_1" ScopeIdentifier="064b0a2d-41de-48cb-be03-4d047a6a7985" Version="V3">
+                                    <uix:NTakeScreenshot.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://mines.gamingcorpscasino.com/index.html?game_code=coin_miner_94&amp;config=games/coin-miner/config.json&amp;language=pt&amp;currency=BRL&amp;play_for_fun=true&amp;platform=desktop&amp;customer=isoftbet&amp;auto_spin=true&amp;max_bet=true&amp;ext_params[licenseeid]=685&amp;ext_params[ISBskinid]=23842&amp;ext_params[ISBgameid]=22747&amp;ext_params[launchercode]=isb_stoiximanbr-lux-prod&amp;ext_params[language]=pt&amp;ext_params[lobbyurl]=https%3A%2F%2Fbr.betano.com%2Fcasino%2Flobbyredirect%2F&amp;ext_params[country]=BR&amp;ext_params[extra]=multi&amp;ext_params[customer]=isoftbet&amp;ext_params[preloader]=betano" DesignTimeRectangle="576, 266, 1370, 750" DesignTimeScaleFactor="1" FriendlyName="'CANVAS canvas'" FullSelectorArgument="&lt;webctrl id='cronus-iframe-*' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_*' tag='IFRAME' /&gt;&lt;webctrl id='canvas' tag='CANVAS' /&gt;" FuzzySelectorArgument="&lt;webctrl id='cronus-iframe-*' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_*' tag='IFRAME' /&gt;&lt;webctrl id='canvas' tag='CANVAS' type='' class='' aaname='' /&gt;" Guid="d2ee43d5-8c23-4782-9c92-30224b5acc37" ImageBase64="" InformativeScreenshot="231bbf6797a25f5bf9301bd5a95b9299.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Betano Mines Slot Grátis | Cassino Betano' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                                    </uix:NTakeScreenshot.Target>
+                                  </uix:NTakeScreenshot>
+                                  <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="431,116" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;A bomba foi encontrada! Reiniciando jogada.&quot;]" />
+                                  <p:CvClickWithDescriptor DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="600" DelayMS="600" Descriptor="[&quot;Target: Text 'JOGAR' (1194,380,128,32)&quot;]" DesignTimeCacheId="a0c469bf-e4ca-4a10-be76-9d53f0dbf1bc" DesignTimeScaleFactor="1" DisplayName="CV Click - Texto" sap:VirtualizedContainerService.HintSize="431,194" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_11" InformativeScreenshot="3dbf47fcb28f63c0247c51e3e948773c" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                    <p:CvClickWithDescriptor.CursorPosition>
+                                      <ui:CursorPosition Position="Center">
+                                        <ui:CursorPosition.OffsetX>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetX>
+                                        <ui:CursorPosition.OffsetY>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:CursorPosition.OffsetY>
+                                      </ui:CursorPosition>
+                                    </p:CvClickWithDescriptor.CursorPosition>
+                                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                      <uc:CvDescriptor Id="bf7c62de-8a26-43d0-9b56-a1284dec92b8">
+                                        <uc:CvDescriptor.Target>
+                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1194, 380, 128, 32" ElementType="Text" Text="JOGAR" />
+                                        </uc:CvDescriptor.Target>
+                                      </uc:CvDescriptor>
+                                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                    <p:CvClickWithDescriptor.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="693f681c-c7e4-43d3-8af5-ded1bfcb7ba8">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </p:CvClickWithDescriptor.Target>
+                                  </p:CvClickWithDescriptor>
+                                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,141" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                                    <ui:MultipleAssign.AssignOperations>
+                                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:Int32">1</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                          <ui:AssignOperation.To>
+                                            <OutArgument x:TypeArguments="x:String">[get_text]</OutArgument>
+                                          </ui:AssignOperation.To>
+                                          <ui:AssignOperation.Value>
+                                            <InArgument x:TypeArguments="x:String">LEVANTAR</InArgument>
+                                          </ui:AssignOperation.Value>
+                                        </ui:AssignOperation>
+                                      </scg:List>
+                                    </ui:MultipleAssign.AssignOperations>
+                                  </ui:MultipleAssign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </ui:InterruptibleWhile.Body>
+                      </ui:InterruptibleWhile>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </p:CVScope.Body>
+              <p:CVScope.DesignTimeCache>
+                <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+              </p:CVScope.DesignTimeCache>
+              <p:CVScope.DesignTimeCacheContainer>
+                <uc:CvCacheContainer>
+                  <uc:CvCacheContainer.Caches>
+                    <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+                      <uc:CVCache DataSent="False" DisplayName="Ecrã CV Click - 'LEVANTAR' (Principal)" Id="c78688f3-9fd9-4a7f-b6de-cf845a3728ab" InformativeScreenshot="708bdc7e80f89a64e96e8dd7601bf05c" LogicalPosition="568, 155" OcrText="SALDO MINAS APOSTA R$990.00 1 R$10 BETANO 6 ? 6 6 MINES 6 - 6 &amp; 6 LEVANTAR ACHADAS R$0 0/24 6 ? ? 6 PROX. BLOCO R$9.8 6 ? &amp; ? &amp; $ ? 6 00:05:54 o 15:25" Position="568, 155" ScreenshotGuid="bcb9625f-f447-4d58-90f1-ffc078340578" ServerVersion="1">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                            <uc:CvElementInfo Category="Button" Region="738, 158, 112, 112" />
+                            <uc:CvElementInfo Category="Button" Region="515, 157, 113, 113" />
+                            <uc:CvElementInfo Category="Button" Region="513, 269, 114, 110" />
+                            <uc:CvElementInfo Category="Button" Region="736, 268, 115, 111" />
+                            <uc:CvElementInfo Category="Button" Region="627, 158, 112, 112" />
+                            <uc:CvElementInfo Category="Button" Region="514, 380, 113, 109" />
+                            <uc:CvElementInfo Category="Button" Region="850, 158, 110, 110" />
+                            <uc:CvElementInfo Category="Button" Region="514, 491, 114, 111" />
+                            <uc:CvElementInfo Category="Button" Region="405, 158, 109, 110" />
+                            <uc:CvElementInfo Category="Button" Region="625, 269, 113, 110" />
+                            <uc:CvElementInfo Category="Button" Region="625, 380, 113, 110" />
+                            <uc:CvElementInfo Category="Button" Region="514, 604, 115, 110" />
+                            <uc:CvElementInfo Category="Button" Region="736, 380, 114, 111" />
+                            <uc:CvElementInfo Category="Button" Region="736, 490, 114, 112" />
+                            <uc:CvElementInfo Category="Button" Region="848, 271, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="848, 382, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="404, 382, 110, 106" />
+                            <uc:CvElementInfo Category="Button" Region="736, 603, 115, 111" />
+                            <uc:CvElementInfo Category="Button" Region="624, 490, 115, 112" />
+                            <uc:CvElementInfo Category="Button" Region="847, 604, 114, 109" />
+                            <uc:CvElementInfo Category="Button" Region="848, 493, 112, 108" />
+                            <uc:CvElementInfo Category="Button" Region="405, 271, 109, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="643, 618, 80, 86" />
+                            <uc:CvElementInfo Category="Button" Region="625, 604, 115, 110" />
+                            <uc:CvElementInfo Category="Icon" Region="531, 617, 81, 86" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 618, 81, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 171, 79, 87" />
+                            <uc:CvElementInfo Category="Icon" Region="756, 170, 79, 86" />
+                            <uc:CvElementInfo Category="Button" Region="405, 606, 110, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 286, 80, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 172, 78, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 172, 80, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="1205, 178, 108, 109" />
+                            <uc:CvElementInfo Category="Icon" Region="533, 173, 79, 84" />
+                            <uc:CvElementInfo Category="Button" Region="404, 493, 110, 107" />
+                            <uc:CvElementInfo Category="Icon" Region="867, 508, 80, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="866, 618, 83, 85" />
+                            <uc:CvElementInfo Category="Icon" Region="866, 397, 81, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 286, 80, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="419, 619, 83, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="421, 398, 80, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="420, 509, 80, 82" />
+                            <uc:CvElementInfo Category="Button" Region="95, 372, 184, 90" />
+                            <uc:CvElementInfo Category="Icon" Region="755, 285, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 285, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 285, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 508, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="45, 718, 28, 30" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 507, 80, 84" />
+                            <uc:CvElementInfo Category="Button" Region="72, 479, 229, 88" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 508, 80, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="532, 397, 79, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="755, 397, 80, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 397, 78, 84" />
+                            <uc:CvElementInfo Category="Cell" Region="401, 488, 112, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="619, 264, 119, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 489, 114, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="730, 385, 118, 107" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 377, 114, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 488, 115, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="734, 489, 114, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="400, 377, 112, 115" />
+                            <uc:CvElementInfo Category="Cell" Region="402, 266, 112, 117" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 378, 115, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="511, 266, 115, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="734, 266, 114, 113" />
+                            <uc:CvElementInfo Category="Cell" Region="731, 599, 117, 116" />
+                            <uc:CvElementInfo Category="Cell" Region="510, 601, 117, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="621, 599, 116, 120" />
+                            <uc:CvElementInfo Category="Cell" Region="400, 599, 114, 120" />
+                            <uc:CvElementInfo Category="Cell" Region="846, 490, 115, 110" />
+                            <uc:CvElementInfo Category="Cell" Region="844, 380, 118, 109" />
+                            <uc:CvElementInfo Category="Cell" Region="844, 600, 125, 117" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1202, 500, 114, 109" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1212, 720, 25, 27" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1158, 295, 200, 194" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="13, 195, 123, 137" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1206, 180, 107, 108" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1224, 521, 72, 68" />
+                            <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1172, 66, 25, 36" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="94, 372, 188, 89" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="72, 480, 232, 86" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1175, 69, 21, 31" />
+                            <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1203, 178, 111, 111" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="401, 154, 112, 110" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="626, 163, 109, 106" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="738, 163, 108, 106" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="850, 274, 110, 101" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="850, 149, 110, 118" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="511, 154, 115, 114" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1245, 11, 121, 164" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="948, 267, 16, 113" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="16, 200, 114, 114" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1177, 280, 188, 219" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1270, 428, 88, 53" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1146, 39, 97, 29" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="956, 487, 18, 115" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="955, 267, 20, 112" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1268, 227, 36, 10" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1238, 32, 127, 34" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1285, 445, 64, 21" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="13, 283, 324, 30" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="39">
+                            <uc:OcrTextInfo Region="53, 36, 88, 22" Text="SALDO" />
+                            <uc:OcrTextInfo Region="1145, 36, 82, 21" Text="MINAS" />
+                            <uc:OcrTextInfo Region="1246, 36, 103, 22" Text="APOSTA" />
+                            <uc:OcrTextInfo Region="21, 69, 153, 32" Text="R$990.00" />
+                            <uc:OcrTextInfo Region="1177, 71, 17, 28" Text="1" />
+                            <uc:OcrTextInfo Region="1258, 69, 79, 32" Text="R$10" />
+                            <uc:OcrTextInfo Region="127, 236, 220, 48" Text="BETANO" />
+                            <uc:OcrTextInfo Region="440, 189, 37, 65" Text="6" />
+                            <uc:OcrTextInfo Region="537, 177, 64, 78" Text="?" />
+                            <uc:OcrTextInfo Region="661, 187, 40, 66" Text="6" />
+                            <uc:OcrTextInfo Region="884, 185, 40, 69" Text="6" />
+                            <uc:OcrTextInfo Region="171, 286, 165, 43" Text="MINES" />
+                            <uc:OcrTextInfo Region="440, 299, 37, 66" Text="6" />
+                            <uc:OcrTextInfo Region="545, 294, 46, 71" Text="-" />
+                            <uc:OcrTextInfo Region="660, 296, 41, 68" Text="6" />
+                            <uc:OcrTextInfo Region="770, 294, 44, 71" Text="&amp;" />
+                            <uc:OcrTextInfo Region="883, 297, 40, 67" Text="6" />
+                            <uc:OcrTextInfo Region="1182, 369, 154, 25" Text="LEVANTAR" />
+                            <uc:OcrTextInfo Region="123, 388, 127, 23" Text="ACHADAS" />
+                            <uc:OcrTextInfo Region="1231, 399, 55, 27" Text="R$0" />
+                            <uc:OcrTextInfo Region="155, 419, 64, 27" Text="0/24" />
+                            <uc:OcrTextInfo Region="441, 416, 36, 61" Text="6" />
+                            <uc:OcrTextInfo Region="541, 402, 56, 75" Text="?" />
+                            <uc:OcrTextInfo Region="654, 404, 50, 73" Text="?" />
+                            <uc:OcrTextInfo Region="885, 410, 37, 67" Text="6" />
+                            <uc:OcrTextInfo Region="103, 492, 76, 26" Text="PROX." />
+                            <uc:OcrTextInfo Region="184, 496, 87, 22" Text="BLOCO" />
+                            <uc:OcrTextInfo Region="150, 526, 74, 28" Text="R$9.8" />
+                            <uc:OcrTextInfo Region="440, 524, 37, 64" Text="6" />
+                            <uc:OcrTextInfo Region="540, 512, 57, 77" Text="?" />
+                            <uc:OcrTextInfo Region="661, 519, 40, 68" Text="&amp;" />
+                            <uc:OcrTextInfo Region="764, 513, 55, 76" Text="?" />
+                            <uc:OcrTextInfo Region="878, 517, 47, 70" Text="&amp;" />
+                            <uc:OcrTextInfo Region="1249, 543, 19, 25" Text="$" />
+                            <uc:OcrTextInfo Region="540, 624, 57, 76" Text="?" />
+                            <uc:OcrTextInfo Region="661, 631, 40, 67" Text="6" />
+                            <uc:OcrTextInfo Region="75, 721, 111, 23" Text="00:05:54" />
+                            <uc:OcrTextInfo Region="1213, 721, 22, 22" Text="o" />
+                            <uc:OcrTextInfo Region="1240, 720, 65, 23" Text="15:25" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                      <uc:CVCache DataSent="False" DisplayName="Ecrã CV Click - 'LEVANTAR'" Id="f78da75b-d05a-4d44-8c4d-7f2edab66543" InformativeScreenshot="61415d26a0c3ed85f734179eab1e1e6e" LogicalPosition="568, 258" OcrText="SALDO MINAS APOSTA R$990.00 1 R$10 O BETANO 6 6 6 MINES &amp; &amp; 6 6 LEVANTAR ACHADAS R$10.2 2/24 6 6 6 6 PROX. BLOCO R$10.7 E &amp; ? $ 6 00:18:57 15:38" Position="568, 258" ScreenshotGuid="031360b0-26e1-4f6e-8543-aaaca49c9f3d" ServerVersion="1">
+                        <uc:CVCache.CvAnchorRelations>
+                          <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="0" />
+                        </uc:CVCache.CvAnchorRelations>
+                        <uc:CVCache.CvUiElements>
+                          <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                            <uc:CvElementInfo Category="Button" Region="629, 143, 108, 108" />
+                            <uc:CvElementInfo Category="Button" Region="519, 143, 110, 108" />
+                            <uc:CvElementInfo Category="Button" Region="518, 467, 111, 107" />
+                            <uc:CvElementInfo Category="Button" Region="737, 143, 108, 107" />
+                            <uc:CvElementInfo Category="Button" Region="735, 467, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="626, 577, 112, 107" />
+                            <uc:CvElementInfo Category="Button" Region="521, 254, 105, 101" />
+                            <uc:CvElementInfo Category="Button" Region="518, 578, 112, 106" />
+                            <uc:CvElementInfo Category="Button" Region="735, 250, 111, 107" />
+                            <uc:CvElementInfo Category="Button" Region="627, 251, 111, 107" />
+                            <uc:CvElementInfo Category="Button" Region="627, 467, 110, 107" />
+                            <uc:CvElementInfo Category="Button" Region="735, 577, 113, 107" />
+                            <uc:CvElementInfo Category="Button" Region="847, 143, 106, 106" />
+                            <uc:CvElementInfo Category="Button" Region="518, 360, 111, 107" />
+                            <uc:CvElementInfo Category="Button" Region="844, 468, 108, 104" />
+                            <uc:CvElementInfo Category="Button" Region="735, 360, 110, 107" />
+                            <uc:CvElementInfo Category="Button" Region="627, 360, 110, 108" />
+                            <uc:CvElementInfo Category="Button" Region="413, 578, 107, 107" />
+                            <uc:CvElementInfo Category="Button" Region="413, 145, 104, 104" />
+                            <uc:CvElementInfo Category="Button" Region="845, 252, 107, 103" />
+                            <uc:CvElementInfo Category="Icon" Region="536, 590, 79, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="755, 157, 75, 83" />
+                            <uc:CvElementInfo Category="Button" Region="412, 468, 107, 105" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 591, 79, 83" />
+                            <uc:CvElementInfo Category="Button" Region="845, 578, 109, 106" />
+                            <uc:CvElementInfo Category="Icon" Region="426, 590, 81, 82" />
+                            <uc:CvElementInfo Category="Button" Region="844, 361, 109, 105" />
+                            <uc:CvElementInfo Category="Icon" Region="536, 156, 78, 82" />
+                            <uc:CvElementInfo Category="Button" Region="412, 361, 106, 105" />
+                            <uc:CvElementInfo Category="Button" Region="412, 252, 107, 104" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 156, 77, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 591, 78, 83" />
+                            <uc:CvElementInfo Category="Icon" Region="537, 374, 77, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="860, 591, 82, 84" />
+                            <uc:CvElementInfo Category="Icon" Region="862, 156, 77, 83" />
+                            <uc:CvElementInfo Category="Button" Region="111, 351, 180, 87" />
+                            <uc:CvElementInfo Category="Icon" Region="754, 375, 76, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 375, 77, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="429, 376, 76, 80" />
+                            <uc:CvElementInfo Category="Icon" Region="863, 376, 77, 80" />
+                            <uc:CvElementInfo Category="Icon" Region="862, 483, 78, 78" />
+                            <uc:CvElementInfo Category="Icon" Region="1191, 163, 106, 105" />
+                            <uc:CvElementInfo Category="Icon" Region="862, 267, 78, 78" />
+                            <uc:CvElementInfo Category="Icon" Region="428, 483, 79, 80" />
+                            <uc:CvElementInfo Category="Button" Region="89, 455, 224, 86" />
+                            <uc:CvElementInfo Category="Icon" Region="536, 482, 77, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="420, 151, 91, 91" />
+                            <uc:CvElementInfo Category="Icon" Region="753, 265, 77, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="753, 482, 78, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="428, 267, 77, 81" />
+                            <uc:CvElementInfo Category="Icon" Region="644, 482, 78, 80" />
+                            <uc:CvElementInfo Category="Icon" Region="645, 266, 77, 82" />
+                            <uc:CvElementInfo Category="Icon" Region="62, 689, 26, 28" />
+                            <uc:CvElementInfo Category="Icon" Region="528, 261, 91, 88" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 465, 111, 119" />
+                            <uc:CvElementInfo Category="Cell" Region="626, 247, 109, 110" />
+                            <uc:CvElementInfo Category="Cell" Region="623, 356, 112, 109" />
+                            <uc:CvElementInfo Category="Cell" Region="731, 466, 111, 116" />
+                            <uc:CvElementInfo Category="Cell" Region="729, 246, 116, 116" />
+                            <uc:CvElementInfo Category="Cell" Region="516, 247, 111, 111" />
+                            <uc:CvElementInfo Category="Cell" Region="410, 575, 112, 109" />
+                            <uc:CvElementInfo Category="Cell" Region="514, 465, 114, 119" />
+                            <uc:CvElementInfo Category="Cell" Region="514, 357, 110, 112" />
+                            <uc:CvElementInfo Category="Cell" Region="732, 358, 110, 108" />
+                            <uc:CvElementInfo Category="Cell" Region="410, 358, 106, 106" />
+                            <uc:CvElementInfo Category="Cell" Region="729, 574, 117, 111" />
+                            <uc:CvElementInfo Category="Cell" Region="409, 464, 111, 118" />
+                            <uc:CvElementInfo Category="Cell" Region="513, 572, 116, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="621, 573, 115, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="409, 246, 110, 114" />
+                            <uc:CvElementInfo Category="Cell" Region="839, 464, 113, 111" />
+                            <uc:CvElementInfo Category="Cell" Region="838, 574, 118, 110" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1197, 688, 26, 27" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1188, 475, 111, 107" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="31, 179, 121, 134" />
+                            <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="63, 689, 26, 28" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1144, 275, 194, 191" />
+                            <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1191, 164, 106, 107" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="109, 350, 183, 87" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1162, 57, 22, 30" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1207, 493, 76, 73" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="33, 195, 336, 125" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="87, 455, 229, 85" />
+                            <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1143, 274, 200, 195" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="839, 247, 116, 113" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="843, 354, 109, 109" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="408, 143, 113, 104" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="734, 134, 108, 117" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="625, 137, 109, 113" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="522, 136, 105, 114" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="843, 138, 108, 108" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1172, 169, 106, 15" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1176, 130, 174, 172" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1343, 71, 26, 51" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1246, 434, 76, 25" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1111, 25, 120, 34" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1155, 320, 199, 146" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1040, 53, 290, 53" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1223, 28, 123, 35" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1323, 45, 46, 101" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1161, 276, 173, 73" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1235, 55, 131, 42" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1221, 18, 117, 142" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1329, 403, 38, 38" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1307, 373, 61, 21" />
+                            <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="1320, 83, 49, 100" />
+                          </scg:List>
+                        </uc:CVCache.CvUiElements>
+                        <uc:CVCache.OcrTexts>
+                          <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="34">
+                            <uc:OcrTextInfo Region="70, 24, 85, 22" Text="SALDO" />
+                            <uc:OcrTextInfo Region="1132, 24, 81, 21" Text="MINAS" />
+                            <uc:OcrTextInfo Region="1231, 24, 101, 21" Text="APOSTA" />
+                            <uc:OcrTextInfo Region="38, 56, 151, 31" Text="R$990.00" />
+                            <uc:OcrTextInfo Region="1164, 59, 16, 26" Text="1" />
+                            <uc:OcrTextInfo Region="1243, 56, 77, 32" Text="R$10" />
+                            <uc:OcrTextInfo Region="33, 182, 104, 118" Text="O" />
+                            <uc:OcrTextInfo Region="141, 219, 216, 46" Text="BETANO" />
+                            <uc:OcrTextInfo Region="553, 170, 38, 65" Text="6" />
+                            <uc:OcrTextInfo Region="660, 169, 40, 66" Text="6" />
+                            <uc:OcrTextInfo Region="882, 177, 32, 59" Text="6" />
+                            <uc:OcrTextInfo Region="185, 267, 160, 42" Text="MINES" />
+                            <uc:OcrTextInfo Region="445, 277, 39, 67" Text="&amp;" />
+                            <uc:OcrTextInfo Region="662, 277, 39, 67" Text="&amp;" />
+                            <uc:OcrTextInfo Region="773, 284, 33, 60" Text="6" />
+                            <uc:OcrTextInfo Region="881, 285, 33, 59" Text="6" />
+                            <uc:OcrTextInfo Region="1169, 348, 149, 25" Text="LEVANTAR" />
+                            <uc:OcrTextInfo Region="138, 368, 123, 21" Text="ACHADAS" />
+                            <uc:OcrTextInfo Region="1199, 378, 89, 26" Text="R$10.2" />
+                            <uc:OcrTextInfo Region="169, 398, 62, 25" Text="2/24" />
+                            <uc:OcrTextInfo Region="448, 392, 34, 61" Text="6" />
+                            <uc:OcrTextInfo Region="662, 387, 38, 64" Text="6" />
+                            <uc:OcrTextInfo Region="770, 389, 38, 63" Text="6" />
+                            <uc:OcrTextInfo Region="881, 395, 33, 57" Text="6" />
+                            <uc:OcrTextInfo Region="119, 467, 73, 26" Text="PROX." />
+                            <uc:OcrTextInfo Region="197, 471, 85, 22" Text="BLOCO" />
+                            <uc:OcrTextInfo Region="159, 501, 83, 27" Text="R$10.7" />
+                            <uc:OcrTextInfo Region="448, 497, 34, 63" Text="E" />
+                            <uc:OcrTextInfo Region="660, 492, 41, 68" Text="&amp;" />
+                            <uc:OcrTextInfo Region="867, 486, 64, 76" Text="?" />
+                            <uc:OcrTextInfo Region="1235, 518, 17, 23" Text="$" />
+                            <uc:OcrTextInfo Region="660, 603, 40, 66" Text="6" />
+                            <uc:OcrTextInfo Region="92, 691, 101, 23" Text="00:18:57" />
+                            <uc:OcrTextInfo Region="1224, 690, 66, 23" Text="15:38" />
+                          </scg:List>
+                        </uc:CVCache.OcrTexts>
+                      </uc:CVCache>
+                    </scg:List>
+                  </uc:CvCacheContainer.Caches>
+                </uc:CvCacheContainer>
+              </p:CVScope.DesignTimeCacheContainer>
+              <p:CVScope.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                  <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,32" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                </ActivityFunc>
+              </p:CVScope.OCREngine>
+              <p:CVScope.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5e7ec4b9-8245-4dc8-bd07-ca6b9ba565a3" InformativeScreenshot="0c5ed4b747111bab3cb4d9a4bc97b350" Selector="&lt;webctrl id='cronus-iframe-0' tag='IFRAME' /&gt;&lt;webctrl id='game_frame_48_7849_1' tag='IFRAME' /&gt;&lt;webctrl id='canvas' tag='CANVAS' /&gt;" WaitForReady="INTERACTIVE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </p:CVScope.Target>
+              <p:CVScope.UseLocalServer>
+                <InArgument x:TypeArguments="x:Boolean" />
+              </p:CVScope.UseLocalServer>
+            </p:CVScope>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="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" InformativeScreenshot="aa80a84d40c3485a144bee683668fb38.jpg" Selector="&lt;html app='msedge.exe' title='Betano Mines Slot Grátis | Cassino Betano' /&gt;" Url="https://br.betano.com/casino/games/betano-mines/7849/fun/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

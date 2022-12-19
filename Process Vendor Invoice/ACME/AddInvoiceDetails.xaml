@@ -1,0 +1,119 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AddInvoiceDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>466,844</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AddInvoiceDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AddInvoiceDetails" sap:VirtualizedContainerService.HintSize="476,779" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="434,689" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="ec79d1e6-37f9-4eed-8d56-26d586eefc5a" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,463" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NHover DisplayName="Hover 'Invoices'" sap:VirtualizedContainerService.HintSize="358,166" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="ec79d1e6-37f9-4eed-8d56-26d586eefc5a" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="756, 674, 200, 46" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Invoices'" FullSelectorArgument="&lt;webctrl aaname='*Invoices' parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='*Invoices' parentid='dashmenu' tag='BUTTON' type='button' class='btn btn-default btn-lg dropdown-toggle' check:text='Invoices' /&gt;" Guid="64739464-c8de-4b04-a7db-c7de0f92a1aa" ImageBase64="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" InformativeScreenshot="da6f3cd1245d3df17e9f9cf9232210a9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NHover.Target>
+            </uix:NHover>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Add Invoice Details'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ec79d1e6-37f9-4eed-8d56-26d586eefc5a" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="8, 79, 0, 0" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Add Invoice Details'" FullSelectorArgument="&lt;webctrl aaname='Add Invoice Details' parentid='dashmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Add Invoice Details' parentid='dashmenu' tag='A' type='' class='' check:innerText='Add Invoice Details' /&gt;" Guid="42e0bde0-06d2-4db9-8c77-7ed98eff5282" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVBhXY4CB/0BgbW39H8qFCGRkZKAKKCkpoQso/QcAw5AWomgVe+QAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="c2b7bf315836b3d7c07a023b82ce7fc3.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" Url="[in_Config(&quot;Acme_Home&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,120 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="AccessVendors" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>466,1000</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>AccessVendors_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="AccessVendors" sap:VirtualizedContainerService.HintSize="476,935" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="434,845" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,619" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Access Vendors&quot;]" />
+            <uix:NHover DisplayName="Hover 'Vendors'" sap:VirtualizedContainerService.HintSize="358,166" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V3">
+              <uix:NHover.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="756, 618, 200, 46" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Vendors'" FullSelectorArgument="&lt;webctrl aaname='                  Vendors' parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                  Vendors' parentid='dashmenu' tag='BUTTON' type='button' class='btn btn-default btn-lg dropdown-toggle' check:innerText='Vendors' /&gt;" Guid="5de60576-cb31-45c9-8745-d2723dce9fc7" ImageBase64="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" InformativeScreenshot="2ab22f9a2b1ee084721dc6af7a63f92b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NHover.Target>
+            </uix:NHover>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Search for Vendor'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="977, 626, 248, 26" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Search for Vendor'" FullSelectorArgument="&lt;webctrl aaname='Search for Vendor' parentid='dashmenu' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Search for Vendor' parentid='dashmenu' tag='A' type='' class='' check:innerText='Search for Vendor' /&gt;" Guid="be22055e-73f3-4e87-a4fb-7fa42f9ce2e8" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAhSURBVBhXY4CB/0BgbW39H8qFCGRkZKAKKCkpoQso/QcAw5AWomgVe+QAAAAASUVORK5CYII=" InformativeScreenshot="fdd72865efd8335d8a19bd8f7cf06ead.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="c2b7bf315836b3d7c07a023b82ce7fc3.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" Url="[in_Config(&quot;Acme_Home&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,30 @@
+﻿{
+    "Constants": {
+        "logF_BusinessProcessName": "Process Vendor Invoice",
+        "OrchestratorQueueName": "",
+        "MaxRetryNumber":	0,
+        "ExScreenshotsFolderPath": "Exceptions_Screenshots",
+        "LogMessage_GetTransactionData": "Processing Transaction Number:",
+        "LogMessage_GetTransactionDataError": "Error getting transaction data for Transaction Number: ",
+        "LogMessage_Success": "Transaction Successful.",
+        "LogMessage_BusinessRuleException": "Business rule exception.",
+        "LogMessage_ApplicationException": "System exception."
+    },
+    "Settings": {
+		
+		"Acme_Url": "https://acme-test.uipath.com/login",
+		"Acme_Home": "https://acme-test.uipath.com/home",
+		"Acme_WorkItems": "https://acme-test.uipath.com/work-items",
+		"Acme_Vendors": "https://acme-test.uipath.com/vendors/search",
+		"Acme_Add": "https://acme-test.uipath.com/invoices/add",
+		
+		
+		"Mail_To": "exceptions@acme-test.com"
+		
+    },
+    "Assets": {
+    },
+    "Credentials": {
+    }
+
+}

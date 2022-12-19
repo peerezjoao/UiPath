@@ -1,0 +1,33 @@
+{
+    "Constants": {
+        "logF_BusinessProcessName": "[Business Process Name]",
+        "OrchestratorQueueName": "[Queue_Name]",
+        "MaxRetryNumber":	0,
+        "ExScreenshotsFolderPath": "Exceptions_Screenshots",
+        "LogMessage_GetTransactionData": "Processing Transaction Number:",
+        "LogMessage_GetTransactionDataError": "Error getting transaction data for Transaction Number: ",
+        "LogMessage_Success": "Transaction Successful.",
+        "LogMessage_BusinessRuleException": "Business rule exception.",
+        "LogMessage_ApplicationException": "System exception."
+    },
+    "Settings": {
+        "[Config_Key_01]": "Value",
+        "[Config_Key_02]": "Value",
+        "[Config_Key_03]": "Value"
+    },
+    "Assets": {
+        "[Config_Key_04]": "[Orchestrator_Asset_Name]",
+        "[Config_Key_05]": "[Orchestrator_Asset_Name]"
+    },
+    "Credentials": {
+        "[Orchestrator_Credential_Asset_Name_01]": {
+            "User": "[Config_Key_06]",
+            "Password": "[Config_Key_07]"
+        },
+        "[Orchestrator_Credential_Asset_Name_02]": {
+            "User": "[Config_Key_08]",
+            "Password": "[Config_Key_09]"
+        }
+    }
+
+}

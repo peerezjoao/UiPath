@@ -1,0 +1,227 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="WriteDetails" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="in_invoiceNo" Type="InArgument(x:String)" />
+    <x:Property Name="in_vendorTaxID" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceDate" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceCurrency" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceItem" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceSubTotal" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceTax" Type="InArgument(x:String)" />
+    <x:Property Name="in_invoiceAmount" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1898,2775</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>WriteDetails_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="88">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="WriteDetails" sap:VirtualizedContainerService.HintSize="476,2710" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ConnectionId="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Use Browser Edge: ACME System 1 - Add Invoice Details" sap:VirtualizedContainerService.HintSize="434,2620" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InUiElement="{x:Null}" InteractionMode="DebuggerApi" IsIncognito="{x:Null}" OpenMode="Never" OutUiElement="{x:Null}" ScopeGuid="af8a068c-02c5-4279-b250-b25b8aac2b1a" Timeout="{x:Null}" UserDataFolderMode="{x:Null}" UserDataFolderPath="{x:Null}" Version="V2" WebDriverMode="{x:Null}">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,2394" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Invoice Number'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceNo]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 370, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT invoiceNumber'" FullSelectorArgument="&lt;webctrl id='invoiceNumber' tag='INPUT' name='invoiceNumber' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceNumber' tag='INPUT' name='invoiceNumber' type='text' class='form-control' aaname='' /&gt;" Guid="bea2d0e8-0688-47db-82b9-45e0cdc2ae0d" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="b78d08ac1bac0bf5e032d6b3354824fc.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 345, 110, 20" ElementType="Text" FriendlyName="'Invoice Number'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Invoice Number:' check:innerText='Invoice Number:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAAAYCAYAAAAmsqlBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVGhD7ZcLboMwDIZ3J05TjgJHqThJxU2qXiUjxH/8SFJaKJuW5Zes8XAc259DtS/XVIUayErUQFaiBrISNZCVqIGsRA1kJRIgZzd2nesuk3vQk9N1n1x/4p7zsMT28YeZngQ9rv36vL+eVyn2Hm/04GT9LsiTFUGahv4zkHTfjW6iwlfDdOM0yWnPnbDbyGsXU83LnkjsS1Y4TcF6N93pRUYSpK8DkSzItOmmF6hhmNx0MfFEfbK2GPNKNco1EOonk+tjjsNIPqHW0oC8ADK1EORBRZUbZCFGs8OwtSf5a4gw0xwhDZLz2g3S2qVXIORg2b2jIaaBCEMOSa207hBILEIQ2xANFsXgPtMg+BiQMfl4CuHvYaWDgwbLSZbiovW++0HS3gKCrp1jRJBJLTqH0p6xF5HHc730aS02DgX5ZOW1fGcSUQUYn9K0BSGfjMVmacl4sjHzXpDZAaMnJka45xPqJX1wnVqIaYdtS8dALp44JfgdLTaDdApIswek4/Gp6ZdP4vq3BNIO4W6Quhb5DNep5b8aWzoIkjcMJnxF47gYxNz4tMYcEMP789DwHs9VBERmQeI+yeMAyHRN6dOq9eMg2U8mTUIDrMHPTr6MJY389dCwlZqRgFwkYyTgrH0CpDXENEMVzdRqQeZq8voAyHLwVQamWpuA9DIw1bu06TYXqXxeHJ/X8tcj+JteHAD5zr8fstYDIJv+shrIStRAVqIGshI1kJWogaxEDWQVcu4bxjRUxsurVtEAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Vendor TaxID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_vendorTaxID]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 444, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT vendorTaxID'" FullSelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' name='vendorTaxID' /&gt;" FuzzySelectorArgument="&lt;webctrl id='vendorTaxID' tag='INPUT' name='vendorTaxID' type='text' class='form-control' aaname='' /&gt;" Guid="773489cf-4844-4a42-89c4-060b10c80b8e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="870e0025601fcd5176bb56811ba881b4.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 419, 93, 20" ElementType="Text" FriendlyName="'Vendor TaxID'" FullSelectorArgument="&lt;webctrl aaname='Vendor TaxID:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vendor TaxID:' tag='LABEL' type='' class='' check:innerText='Vendor TaxID:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAYCAYAAADqK5OqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVGhD7ZXtjcMgDIZvJ6ZpRmlGiTJJ1U2qrsKFBH/wGhKqpld04pX8owRs48e4P77r6+oQGlCH0IA6hAbUITSgDqEBdQgNKEJ4+vnivHPOj7dtRXT347Lu3ODnR1w6U7dxjTtMz7hwjp7TsPotmb1nvcg3+bhf8zHc9b5tOBC/BE4aD8Yi1Tp8Wf8ZQrDLvLT4vmQcPWY/rAfHpfdFFIACppdLXwfvnchXsNSfvKz4LQeBc4mWNACdH/1Ilz9oEMpZxzCQVLH4G61BbUoQUrByT45LfgBM8p9AzswhCJ6aFLnYEVwkGXtoNiYYJ64hbnbU1QYCvW4wgaTHsx3VdRAW4RSpgcCH4iYu+uqEklGdDV3MECgo+JPLW3DoI1+Q8FsgHBWfZCCgsFhB2AzqWzWEQtFRKQS+YBgzdHkaObYD2WKCNpl4BqAmxUhAUgwFOqhmz46KEHYKHcRNBbE+DEEcDtcRHOxAiHveh5B5bUFnQ8DOx9+r5AUG0wWuhpD1a2Ug8MFoUrBCgZSOIIhv8iEXpTjcBCYu+X0fAuZJ33WxeI1MdXMdBMy7LAtBHcaLmsSilZMBCInv1LjoOCLI2Md5EIwxBIqxjWJsjBKErCl4pfGUgaCKnXlGCEI6VpIpQwiiCwZbLjltr0P72Z/V70MwOfD/3+YTiy75bFCqIWD9XoHQ9bfqEBpQh9CAOoQG1CE0oA6hAXUIX5f3v84MorVmB85yAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_3" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceDate]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 518, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT invoiceDate'" FullSelectorArgument="&lt;webctrl id='invoiceDate' tag='INPUT' name='invoiceDate' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDate' tag='INPUT' name='invoiceDate' type='text' class='form-control' aaname='' /&gt;" Guid="aa482b95-7122-42eb-90c0-b128694375ba" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="d6e71c677135d6002d13547468551953.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 493, 35, 20" ElementType="Text" FriendlyName="'Date'" FullSelectorArgument="&lt;webctrl aaname='Date:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Date:' tag='LABEL' type='' class='' check:innerText='Date:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAYCAYAAAB5j+RNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVEhL7ZThDYQgDIVvJ6eRUWQUwyTGTYyr9EApV0o9uJpL/MFLXiJI6SetvODB6nBadTitOpxWBG4FOwwwCLZLXNKsHdxowG1xqFQTXLCZ97iupgAWYv4CZ/0T0WIjIEmW5tAYg2Af40ftsyHzDBz3m7LMDXBe63RuepR3c2BSEuJjYxkuB0OTPHfgcHOxtAg7Oo8WxMuK4xKm1io34FiPXsKxddTspLj0ZUWY6sl9gUsxsupwqcfO+eIUsV9+KWujBDjZCCM3t3cBF+1LdxWT7s/2H6J0fgnnycO7s+zkesBkwTEhB8z6tw73PHU4rTqcVh1OJ4A3tDEWSul034IAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Currency'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceCurrency]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 592, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT invoiceCurrency'" FullSelectorArgument="&lt;webctrl id='invoiceCurrency' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceCurrency' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="12fa966d-d368-46e9-a0d2-04638571d908" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="d90e340dbb2ede9d6f90028360a0d9c9.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 567, 66, 20" ElementType="Text" FriendlyName="'Currency'" FullSelectorArgument="&lt;webctrl aaname='Currency:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Currency:' tag='LABEL' type='' class='' check:innerText='Currency:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAYCAYAAABHqosDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGhSURBVFhH7ZTtjcMgDIZvp0zTjFJGifL7hoiySZVVuBD82oDxkfTuV8MrWWoo/noMfPmuqjoYQx2MoQ7GUAdjqIMx1MEYqoBZvRsGPyQ2Thv9dx/lYF6zHwsobM+VNt1DCZjNz48IITshiyM4o59fYQEnyu2/SLSH/QD44bzjmN/s555xDbC3aYzfhyFP1Ep73ZQOLcl9SGo/7DHvK0GVWss1rhU+UQLG2BAUinMLfdSSWWDYQrP6ioaYORSYxAYYZXyCCygw6oPBon4MGv5NMGVzpq6ASacvYAQymrJjMRg0gsbQSPnNMSm3EU9qqEuBab8lF8BkU6j48VrFqA7dCPlQbJw4e6Dp/sogDJ2+SpJYN6iK+w8w5Pt3MIixn6CF6moO/9Lji+LQDK5Jxe80mPYEW2CkPomhfJIe8li2EjC7igCZMWUBUdp1MDLx0lB8E4xVTzV3sGIIxk3JwRxKg0RTxxTBDtsTvf3GRJVw0nxtMEElHJ0DcdQ1Og/mM6UB/66bgLFPq6WPB5Ne07OnJeg2V+mqOhhDHYyhDqYq738Ao3utRs/4nxsAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Item Description'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceItem]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 666, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT itemDescription'" FullSelectorArgument="&lt;webctrl id='itemDescription' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='itemDescription' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="c5e8a7ab-cfbc-4d7d-9c58-b9d54e16fd06" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="5ca7431f99f50b8f2e8eeb9c6e854e96.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 641, 114, 20" ElementType="Text" FriendlyName="'Item Description'" FullSelectorArgument="&lt;webctrl aaname='Item Description:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Item Description:' tag='LABEL' type='' class='' check:innerText='Item Description:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAYCAYAAAAvWQk7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJOSURBVGhD7ZfrbcMwDIS7U6aJR4lHCfy7QwTdJMgqqh6kSJGiHQV20go6gEDj6MG7j27RLzfUpQbYTjXAdqoBtlMNsJ1qgO1UA2ynYmB/3Hw6udN5cQ944vxPy3lyyx0+Hq374qbQg6o39mDocZ1iL9OV0tmWyA/9FRkfoxWwoak3h2qCTTXfYN2/0AfyYzLAYlNUOKk4ual408zIdc5r0j5+3uxvMmRMNN3J9oohKN8k3b8cCtuHT+ICey7oY3bf4o2lN3hJucXCc4z8av7kMF/KdHIv/h5axzNkuTMPTWDLMLDwEr0n1eQm+Vw0n2WAVc3LMKAQHoZRFhmv+6Dv1X7fL4EsweoKeTwJ1vDB/de9+MoZNoENkhvwM5uWW5roZJbMoPncFJ4J6zU4kAmWzgrwMFR6C8ve09rSKAnWVkCrvtkAmmBVXthXJXDhD+/BM/UZlV62MgQ1gMVAKhUv1UZkGGvgop4Em82qgqFD8/J50FYPXvwulAWWr6kPugUW82S9BRVn1HqRnOraB2zccyTY8mwbLAvRK79VUDGcncFmb0FNYPH7j4M1GsnSRnYDi28gPMdzi7dlTbg//mahAc37i+/bwOq8cJ/OQ/rDe2g45Bm1XnYDC+VNZzOiLCMvgzUqm7PWFX8SdOH+ug/quwmsKhx8nZ/yb/lg+WyD1bkHrYD1wkkOBdMsDelpOwJs2XSUXFucqeFSn0nSB4fYArb+7w5I5lfzL31AzqgdwA61SA3tH9MA+6IG2E41wA59RANspxpgO9UA26Wc+wWfrXXBgdwStQAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Untaxed Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_6" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceTax]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 740, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT unTaxedAmount'" FullSelectorArgument="&lt;webctrl id='unTaxedAmount' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='unTaxedAmount' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="09653308-4128-431e-997a-51dd17f0ac8f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="a7eeb61a891bc934e062405ca8a0c02d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 715, 116, 20" ElementType="Text" FriendlyName="'Untaxed Amount'" FullSelectorArgument="&lt;webctrl aaname='Untaxed Amount:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Untaxed Amount:' tag='LABEL' type='' class='' check:innerText='Untaxed Amount:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHgAAAAYCAYAAAAxkDmIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVGhD7ZcNbsMgDIV3p5ymOUpygkm7QZSTVL1J1aswCPgHGzdhVboN8SRLUwBjv8/J1A/X1bQ64MbVATeuDrhxdcCNqwNuXB1w42KAb24eBjcMs/+L6+HWS3g+uvWeHh1SyCdzvU+PZfQ1D26+pgdFQc8+Lqvv9D/pmL8nAbZyvU+HAF/nCHeL2gH+TR339weAad+aTNxiglOwThFNtp57odFwN+zlpovzeF/SfXUjrPm38bYLmPqap7h3XMQ7DHVNa9obItXIhsM8V1qHOtkXQw7jbYrn5oX1pLyh2M4V8ga9AFiHDRJyyKC7oKlgBv87rRbv3FsPYQLmhhjmSFAYl5EZH4INonUGBrICsIotR8lf//gMwLIgbbjMBZI5g0ThvNBkGuWH8zE/GERnaKAswHAm5izV44WwUh9gIuaV95Tuhb5S7hrAMBRQB57Z85f00ica9ykAdgH5dOaGIijzuYy4D3JymNK0XBpoDjwJjFX/fqiv7G7jLcpqqQBMtad7/y5gmUMbHMThc6NtwNGEasDsTdSh+zoMGNYrAcv6TwIMphtTjMkKyfcAq6ZgnQHGeyCe5c+FA6DylwHzQSoFnqkGTB4qONArDpf0k86cBJgZVYonTdqAY4yfX8YbI9/o2BTWoe4UUQAqg0wCwd786xGk7q0G7KUGNcVeLz7qAcfYfC98GYIywJsKBeZvjm5SA86HJTzPhic0y848A6qaxBDTm3126SecAgz9CSM2ybcL9tYADhIe5v558XVfh/xJtw9Y+3sccFdT6oAbVwfcuDrgxtUBN64OuHF1wE3LuW83wj3ifDZtrgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Tax Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceSubTotal]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 814, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT taxedAmount'" FullSelectorArgument="&lt;webctrl id='taxedAmount' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='taxedAmount' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="a5e64e6c-923a-4ab1-a68e-c86a15bfa0ae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="71800cbff88453e27badf3424bf4697f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 789, 84, 20" ElementType="Text" FriendlyName="'Tax Amount'" FullSelectorArgument="&lt;webctrl aaname='Tax Amount:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Tax Amount:' tag='LABEL' type='' class='' check:innerText='Tax Amount:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFgAAAAYCAYAAAB+zTpYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHASURBVGhD7ZSNjcMgDIVvp0zTjJKMEmWSqptUXYWrEx42GJpQ1eqd5CdZSjH458PlJ7hM5YCN5YCN5YCN5YCN5YCN5YCNJQA/wnoZwjC0bA63uPNzuoUZ8S/rs4L/JKr9mMl3AV9nEX8M6z2u/3lhMLoASwG2bFpfwLhg5ngS52tcmco9pTjHPI3VvYgxL2sYY/xh2luCr3Yx7NP+x1LmQh2AxfDWuHezmJf9bFvPGJa0b9dpwHnRMFE8EtBfXX5Ht9I9QqM98ju6SfWcTzgX0TiZONc6g4s/D1jbHsMIcCk0gsJJryanVN5oPV+KF4vGmQQDF9P6TSouuwcwekMdfIanPOVpqBswN5kXsSk1KIupScfXjXNjKYeakrzRWgzO1drTAizgxbymgMtmVfMkACA78zxUjYvuBaxBkI4Al7C+ArgMCL8EjD1sGXwhgGtZ8xKPAHc8ESkG/OnMVwFrQ/NZ4bVGkxDrxfMTm+8GTCuNy1MxlL0DeLdtXdW26/wbLAujaQDEBtDUaJEwxak9IUWcdwCTcsj6IqV/XG7ZE1KNqQCLYcB6H2DXp+SAjeWAjeWAjeWAjeWAjeWATRXCL3KluYZqqIJhAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" AlterIfDisabled="{x:Null}" ClickBeforeMode="Single" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DeselectAfter="{x:Null}" DisplayName="Type Into 'Total Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,227" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InScope="{x:Null}" InUiElement="{x:Null}" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Text="[in_invoiceAmount]" Timeout="{x:Null}" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 888, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT totalAmount'" FullSelectorArgument="&lt;webctrl id='totalAmount' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='totalAmount' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="658b1c17-9f35-423a-bcfe-dd45211baf40" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVHhe7dgxisJQGIXR2f/aJCtIZyGCiAgBxZg33CEJWkxp/Itz4BZ5ef1H8tMAgJJEGgCKeov0MAyt7/vWdV3b7XZmZma2wdLd9DcdfrVGOi9yab/ft9Pp1M7ns5mZmW2wdDf9TYdfQ71GOgXPhev12u73e3s+n2ZmZrbB0t30Nx1OjxdrpFPvy+XSxnFs0zTNpwDAp6W76W86nB4v1kjnn/jtdhNoAPiC9DcdTo8Xb5HOJzcA8B3psEgDQEEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQlEgDQFEiDQBFiTQAFCXSAFCUSANAUSINAEWJNAAUJdIAUJRIA0BRIg0ARYk0ABQl0gBQ1L+R7rquPR6P+QkA2Fo6nB4v1kj3fd8Oh0Obpmk+AQC2kv6mw+nxYo30MAx/9T4ej20cx/kUAPi0dDf9TYfT48Ua6ciLFDyX8k/czMzMPr90N/19DXS8RRoAqEOkAaCk1n4BOGRylpSr+hAAAAAASUVORK5CYII=" InformativeScreenshot="9562cf3da7bd16c9ebd4b043ce2d0dde.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="756, 863, 93, 20" ElementType="Text" FriendlyName="'Total Amount'" FullSelectorArgument="&lt;webctrl aaname='Total Amount:' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Total Amount:' tag='LABEL' type='' class='' check:innerText='Total Amount:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAAYCAYAAADqK5OqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHwSURBVGhD7ZZdjsMgDIT3TjlNc5TmKFVOUvUmVa/CAvHwY3DjVN0NDx7JD0mMGfujqD/OdLoMwgAyCAPIIAwggzCADMIAMggDqIDwcutlctMkxeIelCkr1Jjd+qTHHb1uc6w93170pq/HFR70tceQbh5fhID134bwcEvhYw/YONLPQ7iOhALP1c3FQKYrsLQAMSwMOsVl9dmbNBBSznXZ9i7WR8GTf7/yX0zpN3kl3RfK3aL2APDFwaN83td8W4tDgnlJ8+jPVQ+BA0DEoQibskarb177EEof/QZkX3PzfrnTGsFXBqWH0MS7eVT9xDJRagi4l/PA8kZbc8KQSqF5anYXQnHKYwu9/AQB++brC3m1d+47CGt4DQUE/DKTD6xRzIOkhNAxFVQZe7MpP61KCM13BiWqedf6qOr0anghZwOjh5C9Y98/g8A3IO1BYCefP7+HgHr9SKf4KAQM+CAE7vUECN7WB9cR1mBgMK6CAGBSAOxhCNx3EIaONfw5rzkVQmqWR9M8hR9S/n/PQgGhhU5KPqjZwxC8JMAAy3sp4jgEili79RakhxDEQSTTpLK5+A0nKkSoVRuVIfCTWCo3F0/yJxCCGIjGQ9Wr90v5eghezTz6cxUgmP5TBmEAGYQBZBAGkEEYQAZhABmE0+XcL2lMoB5T2wuzAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick AlterIfDisabled="{x:Null}" ClickType="Single" ContinueOnError="{x:Null}" CursorMotionType="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Click 'Add Invoice Details'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" InScope="{x:Null}" InUiElement="{x:Null}" KeyModifiers="None" MouseButton="Left" OutUiElement="{x:Null}" ScopeIdentifier="af8a068c-02c5-4279-b250-b25b8aac2b1a" Timeout="{x:Null}" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/invoices/add" DesignTimeRectangle="756, 937, 146, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add Invoice Details'" FullSelectorArgument="&lt;webctrl id='buttonAddInvoice' tag='BUTTON' aaname='Add Invoice Details' /&gt;" FuzzySelectorArgument="&lt;webctrl id='buttonAddInvoice' tag='BUTTON' aaname='Add Invoice Details' type='button' class='btn btn-primary' check:text='Add Invoice Details' /&gt;" Guid="e4c78f42-89f8-4ee9-a2b0-524194b50d9c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJYAAAAmCAYAAAAmy2KXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANtSURBVHhe7Zy/ahwxEIfzRIHk3ih9IE2K2G+RV3BI48Kd0+QaP4Gbg+sM4QoXl8KurlM0+rej2ZG0eycFDL+BD3wraVYjfas1Bt87g0AMCIiFGBKZWLs/f82n77/Nxy8/zfvPPwBoQq6QM+QOjyQWNVCnD1/vzObbvdlc/QKgjXWFnCF3uFxJLLLOSaUNBqABuUMOxUhikXE4qcDZWHfIoRhJLHpfqgMAWAg5FANigW5ALDAEiAWGALHAECAWGALEAkOAWGAIY8R6eHF5jrtHvZ1z+2yO5mS2t0qb5Xp3Mub12VwrbZurJ7O399k/aG19uTnYGx2e1LbzeTTbV7dUs1hXk8+zdEy2po31P5cBYoUiDyTXi7lR+zDeiFhjKAjh1mRNXevEyngzYrmJklDlTXdPf4ijFTAvzI/zcbKCrhAr3HtLMsaoPpk0nl0LJ62PvK88sXgN8gFyD0OK2qZVhHBzWZLX54iR3hJZLRRTrtqJVatrDd3FcpMOG6C9Pty1JEpclFiYFyUtjiua95doYtlI9+T5/L2y1zMtfsztNoJJID7zWuQpyj/LNk2QidpJk0tfzyvyyFrCOqjzZ2LV6vJ5ltNZLG2j5wVmC8n7KJtQL651v7oQ1FaULrTHsdPPSg0JasvvT0z3ya/XxeJtrby1PB5ey1KxLqGvWCRGNjGxYcrG80VTC5vl5KwTK2/nmyXyBNx8pFhqDQHXpsdFYjXzFvLIcQ2x4jr4KNS4kI5i+eL0CKeQuin/USwuepa3p1hrNqQm1rQu7bwij+vvI15bcmLJfD7O+z2rn1il4kORvkBlA/m4wa9CIubb2uvTKcKEC/0IPnb6WZfQU2vTqIiVrUUrb56HPxCRdWJF1tYz0U2smgDFotKTEQsTGxyk7ClWymkjWzC3kWys+FyuIfb1Eri27OGobU5BrDBHfr2eVxGLzc+PtdEQS47THvSldBLLFymf+IS2SSH2OymDz+Uj/Omgp1hJZmXB3Dxj1PPwGtS+LGbiJOJcZOT5IrW8uTwir73m25n8iljz+ejzWEK3EwsADsQCQ4BYYAgQCwwBYoEhQCwwBIgFhgCxwBBUsfAv9uAiSv9ijy8FAZdQ/FIQfI0ROAvrCjlD7qhfY0RBDWQddaL3JQAtyBVyhktFkYmFQPQKiIUYEMb8A54KSzQdCr3CAAAAAElFTkSuQmCC" InformativeScreenshot="5de8ae3dbd7536758f24001406289086.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="7f75f30fdd617eb2b0cc4b31368b4efb.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Add Invoice Details' /&gt;" Url="https://acme-test.uipath.com/invoices/add" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

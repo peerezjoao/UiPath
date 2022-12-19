@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1898,2474</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1898,2629</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>UpdateWorkItem_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -51,7 +51,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="53">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -104,21 +104,22 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UpdateWorkItem" sap:VirtualizedContainerService.HintSize="625,2409" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UpdateWorkItem" sap:VirtualizedContainerService.HintSize="625,2564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="583,2319" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="ea41f812-44fd-4a51-9b94-ce8a6dea9461" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Work Items" sap:VirtualizedContainerService.HintSize="583,2474" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="ea41f812-44fd-4a51-9b94-ce8a6dea9461" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="549,2093" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="549,2248" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -129,6 +130,7 @@
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/work-items/89222589" DesignTimeRectangle="1199, 521, 156, 34" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Update Work Item'" FullSelectorArgument="&lt;webctrl aaname=' Update Work Item' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Update Work Item' tag='BUTTON' type='button' class='btn btn-default' check:text='Update Work Item' /&gt;" Guid="d2256b0c-8a1e-48ad-a2a7-dfbbd0e80fef" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKAAAAAmCAYAAABDJpDoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAR7SURBVHhe7Zy9a9tAFMD7PwkCGQqdDB2ymUIM2UuHTDUFa0qW0sl0yGQ8hQ5dSpbigHGhkC0hJVsDxpmyhEDBkCEQeL13uq93d7Jlx5Li5P3goKf7eHfvfpIaD3oFDFMjLCBTK0TAu7s7GI/HcH5+DmdnZ1y4rKygU+gWOuZiBMQG7HRzcwMPDw/qKsOsBnQK3ULHXAmNgGgndmCYMkHH0DWNERDN5CcfUzboGLqmMQLie5phqsB1jQVkKocFZGqFBWRqhQVkaqVyAe//3cIt/f2RecFUKuD1jzY0kgSSjRZ0T6fqKvOSqU7AP13YQvl0YQkZQSUCXh/34ejyFkZ7W1ZALDt9mKg+lhGkSQv69gdyw6TXgmQ7NqYIOG8C6VBV5yBjdUaqtggT6G8n0Op5qxymcs9+/MfsadQROSy0Rn9NWb1oLsqkdAHNa7fxHr57Eja/XqheLusuYHwsXmtth9eLSxTCAs5ByrfRhC/DAey/pRK2Pp9A/AVcUMBxH1pJCiP1ZJElcui2LQ0ElAeo22WfbDwZZ4TPDi28HkGuSaxNVbOxuCfcm3vdvymyuo7hPkWlwL2+accxVEC9Pnd+jSsg3YeNQWO7uZT5EHU3Xxif5jeMWoTSBDTy/Z6IhTfsQhu7cHSlOkVZREAxny8Ikcgehk6ePmxZdyXyXpE66armHGAGPXwfbw+4Vhkrm8cIp28iWckE8IXQ9Ww/NC92DXTvIf76vXWoWLZO+2vRSG5E3cST+4if2TxKETBXPlGauU8+zSICev3Mk8dPOOIn2Ye2EwFxXldWSf46EZTDxMfxaq68ecneNGY/8XYtYHAzBcwWkKxJ49wcQewg977QxVm5gI+TD1lEQPuEk5jExGSLJ0nO6awxdih+H1vyBXTHoyAmLq5R7cGVVMtEmCWBQI5Ra6E3m89sAd15aJkloJv7JyJg9gfHG2gfLysfUo2AVio9Bx3jChQ7/LkY0XBe/7BwjREJlhEQr5l9q4aALNZMAf3YDkHsIPd0vkVYmYDTX/vZX7uibL7eNOItJh+SvxmSqFjSC7+CYzHyBXRfhcXBGGJ9Pfua1eA+UvEHhXuIUckLvoLNv/3xBj8fdP/R2A5rIeDgUxMOLlUilpYvQ27YP3C5aWeTqm7vXC/JnjR6Xdn4+IHYdrUGb25bFxSQEmPiTy/0RhDIsd58Yia8AWxfWp8nYDjeJb5fK0w41o23BgL+hYN3bRg8iNfw6QAOO9lvfcvIZ9CHZIr3tFNPwLSDsqo+5EBV4lSb/gkjEFiVdOhJZtp1orND0v3nySeRe4i9GvNkoTHyhNBQAQW58XwBndwE+1XFifX0BZwewa5YdONjHwbfutDeaTxOviIoAfP/38OsAysS8AS6H95DuteFw58juLiawr1qKg0W8FmwGgHrgAV8FqyvgMyzgAVkaoUFZGqFBWRqhQVkaiUqIH+ag6mC3E9z8MeJmCrI/TgRf56NKRN0Ct1Cx6KfZ0OwAe3ETvie5sJlVQWdQrdc+RAiIMNUDQvI1AjAf+0i+8JXqAxaAAAAAElFTkSuQmCC" InformativeScreenshot="71b8b4dcc9159dfa137b87b8fbf2e057.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Work Items' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
               </uix:NClick.Target>
             </uix:NClick>
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="507,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Atualizando Item.&quot;]" />
             <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Edge: ACME System 1" sap:VirtualizedContainerService.HintSize="507,1664" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="19642966-552e-404b-aad7-c8e4a5c068c4" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">

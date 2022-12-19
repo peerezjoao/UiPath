@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>466,1000</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1898,1001</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AccessVendors_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -43,7 +43,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="35">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="70">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -78,27 +78,37 @@
       <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
       <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="AccessVendors" sap:VirtualizedContainerService.HintSize="476,935" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="AccessVendors" sap:VirtualizedContainerService.HintSize="476,936" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="434,845" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="434,846" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,619" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,620" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Access Vendors&quot;]" />
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="358,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Acessando vendedores.&quot;]" />
             <uix:NHover DisplayName="Hover 'Vendors'" sap:VirtualizedContainerService.HintSize="358,166" HoverTime="1" sap2010:WorkflowViewState.IdRef="NHover_1" ScopeIdentifier="8fc5930f-63f4-4942-8fba-b3ae0ba444f1" Version="V3">
               <uix:NHover.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="756, 618, 200, 46" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Vendors'" FullSelectorArgument="&lt;webctrl aaname='                  Vendors' parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                  Vendors' parentid='dashmenu' tag='BUTTON' type='button' class='btn btn-default btn-lg dropdown-toggle' check:innerText='Vendors' /&gt;" Guid="5de60576-cb31-45c9-8745-d2723dce9fc7" ImageBase64="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" InformativeScreenshot="2ab22f9a2b1ee084721dc6af7a63f92b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />

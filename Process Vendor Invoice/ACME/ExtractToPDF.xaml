@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1898,4317</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1898,3512</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractToPDF_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -124,7 +124,7 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractToPDF" sap:VirtualizedContainerService.HintSize="1034,4252" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractToPDF" sap:VirtualizedContainerService.HintSize="1034,3447" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="invoiceDate" />
       <Variable x:TypeArguments="x:String" Name="invoiceVendor" />
@@ -140,20 +140,21 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Invoice-100673.pdf" sap:VirtualizedContainerService.HintSize="992,4162" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8ddd06a9-cc96-4786-b0c2-0479534302ba" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Invoice-100673.pdf" sap:VirtualizedContainerService.HintSize="992,3357" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="8ddd06a9-cc96-4786-b0c2-0479534302ba" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="958,3936" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="958,3131" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="916,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracting data from pdf&quot;]" />
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="556,2620" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="916,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Começando a extração dos dados do PDF.&quot;]" />
+            <ui:Comment DisplayName="Comentário" sap:VirtualizedContainerService.HintSize="916,141" sap2010:WorkflowViewState.IdRef="Comment_1" Text="A abordagem utilizada a seguir, não segue as boas práticas de desenvolvimento. Por enquanto, não tenho uma abordagem forte o suficiente para isso. Sujeito a alterações no futuro." />
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="916,193" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -161,7 +162,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="1f8a55a4-a3b8-412b-88ca-f99d640e603e" DisplayName="CV Screen Scope 'pane  Página 1'" sap:VirtualizedContainerService.HintSize="265,61" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V5">
+                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="1f8a55a4-a3b8-412b-88ca-f99d640e603e" DisplayName="CV Screen Scope 'pane  Página 1'" sap:VirtualizedContainerService.HintSize="516,61" sap2010:WorkflowViewState.IdRef="CVScope_5" SendOnPremData="False" Version="V5">
                   <p:CVScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -682,10 +683,10 @@
                 </p:CVScope>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="522,2448" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
@@ -693,7 +694,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="1dfaf320-68d6-4335-af3f-bc8e3bba71ac" DisplayName="CV Screen Scope 'pane  Página 1'" sap:VirtualizedContainerService.HintSize="516,2339" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V5">
+                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="1dfaf320-68d6-4335-af3f-bc8e3bba71ac" DisplayName="CV Screen Scope 'pane  Página 1'" sap:VirtualizedContainerService.HintSize="516,2451" sap2010:WorkflowViewState.IdRef="CVScope_4" SendOnPremData="False" Version="V5">
                       <p:CVScope.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>
@@ -1222,8 +1223,8 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="916,116" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Invoice IDNo: &quot; + invoiceNo + vbLf +&#xA;&quot;Invoice TaxID: &quot; + invoiceTaxID + vbLf +&#xA;&quot;Invoice Subtotal: &quot; + invoiceSubTotal + vbLf +&#xA;&quot;Invoice Tax: &quot; + invoiceTax + vbLf + &#xA;&quot;Invoice Item: &quot; +  invoiceItem]" />
-            <Sequence DisplayName="Save PDFs" sap:VirtualizedContainerService.HintSize="916,1113" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="916,116" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Invoice IDNo: &quot; + invoiceNo + vbLf +&#xD;&#xA;&quot;Invoice TaxID: &quot; + invoiceTaxID + vbLf +&#xD;&#xA;&quot;Invoice Subtotal: &quot; + invoiceSubTotal + vbLf +&#xD;&#xA;&quot;Invoice Tax: &quot; + invoiceTax + vbLf + &#xD;&#xA;&quot;Invoice Item: &quot; +  invoiceItem]" />
+            <Sequence DisplayName="Save PDFs" sap:VirtualizedContainerService.HintSize="916,1499" sap2010:WorkflowViewState.IdRef="Sequence_25">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1234,15 +1235,26 @@
                   <uix:TargetAnchorable DesignTimeRectangle="2381, 89, 21, 20" DesignTimeScaleFactor="1" ElementType="Icon" FriendlyName="'graphic'" FullSelectorArgument="&lt;ctrl name='Invoice-*' role='document' /&gt;&lt;ctrl name='Barra de PDF' role='tool bar' /&gt;&lt;ctrl name='Salvar (Ctrl+B)' role='push button' /&gt;&lt;ctrl role='graphic' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Invoice-629874.pdf' role='document' /&gt;&lt;ctrl name='Barra de PDF' role='tool bar' /&gt;&lt;ctrl name='Salvar (Ctrl+B)' role='push button' /&gt;&lt;ctrl role='graphic' automationid='' /&gt;" Guid="c37177cd-23c9-43f8-a4e8-754b2b53fc0f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADGSURBVEhL7ZTRCYQwDIZvrw7gMg7QZTpA+94u0/c6gAPk+IVALhdthbsTDn/4sCZNP1Hw4Zyjb3NLTnGdZJ5naq3RSGKMb/MaU7IsyybCGtF9rk/TRKUUyjmbexhTglhriaxDlFJ66UuGJHhi2cc9snev6UpCCLSu61aTQX1vRtOVjHI0c70Er6QXfm2IPENyKEH0R9cg8mrRleiehvfw1eLPJfxbORpkEOyttZp9YEq899vQaPBQmLHOAqbk09ySU/xA4ugJrKKqNxI3MBgAAAAASUVORK5CYII=" InformativeScreenshot="eaab6e4b1c3044e478a2f5f09344da28.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Invoice-629874.pdf - Perfil 1 — Microsoft​ Edge' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
                 </uix:NClick.Target>
               </uix:NClick>
-              <uix:NCheckState DisplayName="Check App State 'Sa&amp;lvar'" sap:VirtualizedContainerService.HintSize="854,783" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8ddd06a9-cc96-4786-b0c2-0479534302ba" Version="V3">
+              <uix:NCheckState DisplayName="Check App State 'Sa&amp;lvar'" sap:VirtualizedContainerService.HintSize="854,1169" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="8ddd06a9-cc96-4786-b0c2-0479534302ba" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,557" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                  <Sequence DisplayName="Destino aparece" sap:VirtualizedContainerService.HintSize="400,943" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="directoryToSave" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="8ddd06a9-cc96-4786-b0c2-0479534302ba" Text="[&quot;C:\Users\peere\Documents\UiPath\Process Vendor Invoice\ACME\PDFs\&quot; + in_invoiceID.Trim + &quot;.pdf&quot;]" Version="V3">
+                    <ui:GetRobotAsset AssetName="caminhoParaArquivos" CacheStrategy="None" DisplayName="Get Asset" FolderPath="peerezjoao1@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="338,347" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+                      <ui:GetRobotAsset.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:GetRobotAsset.TimeoutMS>
+                      <ui:GetRobotAsset.Value>
+                        <OutArgument x:TypeArguments="x:String" />
+                      </ui:GetRobotAsset.Value>
+                    </ui:GetRobotAsset>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,227" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="8ddd06a9-cc96-4786-b0c2-0479534302ba" Text="[directoryToSave + in_invoiceID.Trim + &quot;.pdf&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="136, 429, 1031, 17" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Invoice-629874.pdf'" FullSelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Painel do Explorer' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Nome:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" Guid="0375137b-affa-4604-8954-4f084386921c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABAsAAAAVCAYAAAAgqWdPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL7SURBVHhe7dzrceIwFAbQLYtqXAu1uBQ6oRKvZVmWrmwIWQITdo4yZyay9bD8736Q/DmdThMAAABAISwAAAAAAmEBAAAAEAgLAAAAgEBYAAAAAAQ3woLzdJl/zof3njSM03X+GYeDe084X6a11bXrtfnqONTxzY2vrg/jdb3StvhuljHXcRqaa9+X3nnzXsqzPL0uAAAAfM/7w4IXSHV1KPqTYZzGc+k3hfgSVpSztQX6rd+jFAzEvdLYnyjq+/2n6bI9PwAAALzPfxAWzM/6ZaE+TOM1F+J9sb/1U4jQrJMCiH2xvn8vaf5ljHP/TR8WHIcVAAAA8GoPhAVr4TquX4ufWy62UwHeFdT5I/5cNC+f4NdWx/WFcF6ntG1cmH8nuFiq+vS0azss2ut5boYFTaAQz9+Y92rnLs94Oe+Chmo967meZTd/uz7msUOaU1sYDwAAAG/wYFgwt1QUp34qzsu9/PH7Ni9365xY+LeFePk9BwX7grgdM+uL9NbyPHVs6vZjw7VlfDlbt39TvIcQZBvbPFPbvxsWzC0EKGWN+I5SaFHP0Z0fAAAA3ujxbxZshWvb78aForhcz1KNXoOEdf7BuEVTtG+tfIK/dreCPy9c54b+cRiRC/PU5t0vD/4ZQrrf7BO+odDNrfp316y7m9O/1zgPAAAA3uXJsKAWzbvieZuffT8sOLh+5GZY0H8T4Fh5rvD8Sbduul/Dg3SGg7YLDPp3l8MLYQEAAAC/2dNhQS5659GzWtynMWtRXMYcrnf8yX+Zv79+ZL/esm8fIhxJY0rB3v4+y92y/xfBQyj82+fpzrF7D/UdpTBiHtnMu7MfAAAAvNDzYcFaoO8K86UwLu3e/NSvLQYMTbtX+Ldj13G5+I4tF+3tfm3A0c0J+6U5cWxwNyy4Ln/qUNp2viQlEmur/+CwXwMAAADe60ZYwM9Q9AMAAPB5hAUvJSwAAADg8wgLXkpYAAAAwOcRFgAAAACBsAAAAAAIhAUAAABAICwAAAAAGqfpLy0IyC/irErsAAAAAElFTkSuQmCC" InformativeScreenshot="e311d2c0dca4de9e732b23c384dfd5a9.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='#32770' title='Salvar como' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete">
                           <uix:TargetAnchorable.Anchors>
@@ -1320,8 +1332,16 @@
                 </scg:List>
               </ui:MultipleAssign.AssignOperations>
             </ui:MultipleAssign>
-            <uix:NNavigateBrowser DisplayName="Navigate Browser - Voltar" sap:VirtualizedContainerService.HintSize="916,91" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
-            <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="916,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Config(&quot;Acme_Home&quot;).ToString]" Version="V3" />
+            <Sequence sap:VirtualizedContainerService.HintSize="916,501" sap2010:WorkflowViewState.IdRef="Sequence_28">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="338,116" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[&quot;Fechando tela do PDF e redirecionando para tela Home.&quot;]" />
+              <uix:NNavigateBrowser DisplayName="Navigate Browser - Voltar" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+              <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[in_Config(&quot;Acme_Home&quot;).ToString]" Version="V3" />
+            </Sequence>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

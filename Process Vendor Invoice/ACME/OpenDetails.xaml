@@ -10,7 +10,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>769,1294</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1898,1294</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>OpenDetails_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -122,7 +122,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="431,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Click on download PDF&quot;]" />
+            <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="431,116" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Baixando PDF.&quot;]" />
             <uix:NGetAttribute Attribute="text" DisplayName="Get Attribute 'Invoice ID:'" sap:VirtualizedContainerService.HintSize="431,216" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="8dc9b9a6-a989-4ba3-8f0d-eca2ec2f5be4" Version="V3">
               <uix:NGetAttribute.Result>
                 <OutArgument x:TypeArguments="x:String">[invoiceInformation]</OutArgument>

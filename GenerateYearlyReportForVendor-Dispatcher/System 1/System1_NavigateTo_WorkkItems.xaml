@@ -1,0 +1,93 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="System1_NavigateTo_WorkkItems" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="770,817" sap2010:WorkflowViewState.IdRef="System1_NavigateTo_WorkkItems_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="System1_NavigateTo_WorkkItems" sap:VirtualizedContainerService.HintSize="476,573" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: ACME System 1 - Dashboard" sap:VirtualizedContainerService.HintSize="434,483" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="a6b68c26-a29e-47e8-b1de-56b991977831" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="400,257" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Work Items'" sap:VirtualizedContainerService.HintSize="358,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="a6b68c26-a29e-47e8-b1de-56b991977831" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/home" DesignTimeRectangle="756, 355, 200, 46" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Work Items'" FullSelectorArgument="&lt;webctrl aaname='                          Work Items' parentid='dashmenu' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                          Work Items' parentid='dashmenu' tag='BUTTON' type='button' class='btn btn-default btn-lg' check:innerText='Work Items' /&gt;" Guid="98c309cf-6531-4ffa-8c13-8d496395dede" ImageBase64="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" InformativeScreenshot="a92b7409b63baabc586903c868bb2ef4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAReSURBVFhHvZdtbFNlFMcf3SxUfI0miLAEWdShCV+EGD9oUJBJAobwQb8IGklkKEQkcy8MZK90tGsnZbxsvkDmxsYkS8QFPhDYLIy+sbv2rhW3dYPFbGyVbYwJJMu2wzm3Prd317ZCc+uHf9vnPC/n13PPc57nMrZX6EPdQo39zyKf1wgAZJWQ2sJtzYVrkw+lDT9G5UbBZWB5TmC7XIlRHgnXJ4hSyecwAYwxAzawM/1EoKFSvLEh97eBjOw4xedmNg9k7LSFRO2sloEMg2Po0x3n+4tYMUaiUIr0SAiAiL5xwfrGqyvSt69hiZZuXzv6cwP+cQVAoRveqQtsizRBS33vHV6cTAD5agA0rG7o+SLSpHg0ODG9aGlFR+vy+kCl0l4p3HgpKkC6RgAA8GxSqQfY5zZgm22wq3XwFO+zOIeiA6z5OQyQctBXpTd6BdwZwrsNPVZuV2vJD3/YWOFl9xNmr5hULGwiW8v1OxvZpmZg5SKw7a2Y8e3Ax5c5g9EB1p4MA+hNnjssH7dlth2WHusMcrta8yt8wHLswIpwbEHbUW5P/e4KsK0XJDX2jBVw+30DPGkR7awIt8pOJ7xR03WO29VadNg/Ke1tLDJPfyvuUfbtbu5fn+MIvqK0HYmVAzMAzKJTAdCsXEQpBJimMQQwx+TNjzRm6PbUQ/x3lWc4cQC60nYZYOEhP+jxsTxqbAfMp3JurxZHNAY44p/iAHpFBB63eIF9jbmBJVhn9Bi5vdanPYAcASUA/mtgu7H24+H2nLVDttdoDZAaBWAB7Q4CwLo/d38cAE9Z7hsg4iOIC+B9BcDsfR6XdGrhFltW3XWe29VKq/JPSAAGHFsiyPs9LgBlJcQk8mGFA5ZlhxX1gTPcrlbKobCjOWavidvjAnjreEAG+Ph03yn21SVgmZfg9druAW5XK9mI2Y5HOct2gFUIbuH25w/EAfBmTRjgqH9ks1RK6VDBx9B5a+IF3sc1DbCE5TqoBEvb7drfE/N431xrx4MDrKwPA5D0Zeg8FxehwXvckHfh+icmVzCt7vfRxTkt/VmMzopinLv1IrxW03VTOTdaBKpjAbynOo6b/hzfwj46hxmO/ZQPGGZdGYac2plYZOgOSU4+s8HoFKxSzk2hHKBHg3VgntUnnxExI6AGIH3Y1NfGdmAufInHKk2ik48umBgRsusK3LDhbL9c6biYAZ1suyglMUbpILfX+R8QgNTUO77sg8beX58xeuAxrO3JeL7Pt4jjG3+5+lPf3UldpDlvH+++mXqgY/LlSj8srw1kcfsxMcZhFA1ASx0WYgDglSzhl9IfPcNpUQHwUro20iStNQsf47+v5ZjN6072lpy4Mrqw3BV81eSYKSPKjCq1D0ptc4Qx/6UK4a8XjY6hdcmUoJi86FsCCL2aIUQSdszGRHsYvylMWusRFNuLotoReh2UXs1CDXpXo9cl2l5ElwjxtblPEn50o0ZQQUmGf74ToZlro0+h8x4tMHhuvyezngAAAABJRU5ErkJggg==" InformativeScreenshot="c643d5f7bc8f02b2b81f46e83ab7e686.jpg" Selector="&lt;html app='msedge.exe' title='ACME System 1 - Dashboard' /&gt;" Url="https://acme-test.uipath.com/home" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
